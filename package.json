@@ -1,0 +1,19 @@
+{
+  "name": "Gift-o-Matic",
+  "version": "0.0.0",
+  "description": "Gift-o-Matic Backend",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jxcube/gom-backend"
+  },
+  "author": "Jaxcube",
+  "license": "-",
+  "bugs": {
+    "url": "https://github.com/jxcube/gom-backend/issues"
+  },
+  "homepage": "https://github.com/jxcube/gom-backend"
+}
