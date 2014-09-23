@@ -1,7 +1,9 @@
 #!/usr/bin/env node
-var debug = require('debug')('testsqlz');
+var debug = require('debug')('example-app');
 var app = require('../app');
-var db = require('sequelize');
+
+// Sequelize models
+var db = require('../models');
 
 app.set('port', process.env.PORT || 3000);
 
@@ -10,12 +12,16 @@ db
     .sync({ force: true })
     .complete(function(err) {
         if (err) {
-            throw err[0];
+            throw err;
         } else {
+            db.User.create({
+                username: 'John Doe',
+                password: 'secret'
+            });
+
             var server = app.listen(app.get('port'), function() {
               debug('Express server listening on port ' + server.address().port);
-            });
+            });            
         }
     })
-
 
