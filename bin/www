@@ -2,11 +2,13 @@
 var debug = require('debug')('example-app');
 var app = require('../app');
 
-// Sequelize models
+// import the 'virtual' db
 var db = require('../models');
 
+// set the port
 app.set('port', process.env.PORT || 3000);
 
+// open the connection between the ORM and the database
 db
     .sequelize
     .sync({ force: true })
@@ -14,6 +16,7 @@ db
         if (err) {
             throw err;
         } else {
+            // FOR TESTING ONLY
             db.User.create({
                 username: 'John Doe',
                 password: 'secret'

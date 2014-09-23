@@ -2,11 +2,14 @@ var fs = require('fs');
 var path = require('path');
 var lodash = require('lodash');
 
+// load the configuration file
+var config = require('../config');
+
 // import sequelize module
 var Sequelize = require('sequelize');
 // define the connection
 // param list: dbname, username, password, config object
-var sequelize = new Sequelize('exampledb', 'postgres', 'mediumraresteak', {
+var sequelize = new Sequelize(config.db.dbname, config.db.username, config.db.password, {
     dialect: 'postgres'
 });
 // initialize 'virtual' db
