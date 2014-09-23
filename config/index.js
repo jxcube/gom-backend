@@ -2,6 +2,6 @@ module.exports = {
     db: {
         dbname: 'gom_db',
         username: 'postgres',
-        password: 'mediumraresteak'
+        password: 'ENTER YOUR PSQL PASSWORD HERE'
     }
 }
