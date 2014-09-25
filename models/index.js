@@ -10,7 +10,8 @@ var Sequelize = require('sequelize');
 // define the connection
 // param list: dbname, username, password, config object
 var sequelize = new Sequelize(config.db.dbname, config.db.username, config.db.password, {
-    dialect: 'postgres'
+    dialect: 'postgres',
+	port: config.db.port
 });
 // initialize 'virtual' db
 var db = {};
