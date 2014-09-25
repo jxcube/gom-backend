@@ -15,6 +15,22 @@ router.route('/user')
             .success(function(users) {
                 res.json(users);
             });
-    });
+    })
+	
+	.post(function(req,res) {
+		// Create new user entry
+		db.User.create({
+			username: req.body.username,
+			password: req.body.password,
+			email: req.body.email
+		}).complete(function(err) {
+			if (err) {
+				res.json({ message: 'error' });
+			} else {
+				res.json({ message: 'success'});
+			}
+		});
+		
+	});
 
 module.exports = router;
