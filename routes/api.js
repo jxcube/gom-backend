@@ -9,7 +9,9 @@ var db = require('../models');
 router.route('/user')
     // GET /api/user -> all user data
     .get(function(req, res) {
-        db.User.findAll()
+        db.User.findAll({
+			attributes: [username, email]
+		})
             .success(function(users) {
                 res.json(users);
             });

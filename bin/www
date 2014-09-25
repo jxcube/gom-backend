@@ -19,7 +19,8 @@ db
             // FOR TESTING ONLY
             db.User.create({
                 username: 'John Doe',
-                password: 'secret'
+                password: 'secret',
+				email: 'john-doe@example.org'
             });
 
             var server = app.listen(app.get('port'), function() {
