@@ -7,14 +7,30 @@ var config = require('../config');
 
 // import sequelize module
 var Sequelize = require('sequelize');
-// define the connection
-// param list: dbname, username, password, config object
-var sequelize = new Sequelize(config.db.dbname, config.db.username, config.db.password, {
-    dialect: 'postgres',
-	port: config.db.port
-});
+var sequelize = null;
+
+if (process.env.HEROKU_POSTGRESQL_GRAY_URL) {
+    var match = process.env.HEROKU_POSTGRESQL_GRAY_URL.match(/postgres:\/\/([^:]+):([^@]+)@([^:]+):(\d+)\/(.+)/);
+    sequelize = new Sequelize(match[5], match[1], match[2], {
+        dialect: 'postgres',
+        protocol: 'postgres',
+        port: match[4],
+        host: match[3],
+        logging: true
+    })
+} else {
+    // define the connection
+    // param list: dbname, username, password, config object
+    sequelize = new Sequelize(config.db.dbname, config.db.username, config.db.password, {
+        dialect: 'postgres',
+        port: config.db.port
+    });
+}
+
 // initialize 'virtual' db
 var db = {};
+
+
 
 /**
 * We want to load every model file in this directory
