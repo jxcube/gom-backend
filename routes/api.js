@@ -10,8 +10,8 @@ router.route('/user')
     // GET /api/user -> all user data
     .get(function(req, res) {
         db.User.findAll({
-			attributes: ['username', 'email']
-		})
+            attributes: ['username', 'email']
+        })
             .success(function(users) {
                 res.json(users);
             });
@@ -42,7 +42,7 @@ router.route('/item')
 	})
 	
 	.post(function(req,res) {
-		// Create new user entry
+		// Create new item entry
 		db.Item.create({
 			name: req.body.name,
 			price: req.body.price,

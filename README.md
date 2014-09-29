@@ -31,4 +31,17 @@ This repository is for the back-end implementation of Gift-O-Matic Application.
         $ npm start
         
 ## Contribute
-To be continued..
+To contribute, you must follow our coding styles and standards:
+* use **spaces** instead of **~~tabs~~** for indentation
+* use **4** spaces for indentation
+* always put a **semicolon** (;) at the end of every line of code
+* every variable has their own `var`
+```javascript
+// Do this!
+var fs = require('fs');
+var http = require('http');
+
+// Not this!
+var fs = require('fs'),
+    http = require('http');
+```
