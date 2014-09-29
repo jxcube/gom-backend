@@ -27,3 +27,5 @@ config
 
 # Users Environment Variables
 .lock-wscript
+
+sh.exe.stackdump

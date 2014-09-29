@@ -18,10 +18,16 @@ db
         } else {
             // FOR TESTING ONLY
             db.User.create({
-                username: 'John Doe',
+                username: 'Joko Doe',
                 password: 'secret',
 				email: 'john-doe@example.org'
             });
+			
+			db.Item.create({
+				name: 'shoe',
+				price: '15000',
+				description: 'a very cheap shoe'
+			});
 
             var server = app.listen(app.get('port'), function() {
               debug('Express server listening on port ' + server.address().port);
