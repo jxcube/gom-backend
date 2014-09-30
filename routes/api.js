@@ -18,6 +18,13 @@ router.route('/user')
     })
 	
 	.post(function(req,res) {
+		if (!(req.body.username && req.body.password && req.body.email)) {
+			res.json({
+				message: 'error',
+				detail: 'please provide complete information'
+			});
+		}
+
 		// Create new user entry
 		db.User.create({
 			username: req.body.username,
