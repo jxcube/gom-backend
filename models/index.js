@@ -10,6 +10,7 @@ var Sequelize = require('sequelize');
 var sequelize = null;
 
 if (process.env.HEROKU_POSTGRESQL_GRAY_URL) {
+    // the app runs on Heroku server
     var match = process.env.HEROKU_POSTGRESQL_GRAY_URL.match(/postgres:\/\/([^:]+):([^@]+)@([^:]+):(\d+)\/(.+)/);
     sequelize = new Sequelize(match[5], match[1], match[2], {
         dialect: 'postgres',
@@ -19,8 +20,7 @@ if (process.env.HEROKU_POSTGRESQL_GRAY_URL) {
         logging: true
     })
 } else {
-    // define the connection
-    // param list: dbname, username, password, config object
+    // the app runs on local server
     sequelize = new Sequelize(config.db.dbname, config.db.username, config.db.password, {
         dialect: 'postgres',
         port: config.db.port
