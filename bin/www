@@ -5,6 +5,8 @@ var app = require('../app');
 // import the 'virtual' db
 var db = require('../models');
 
+var pop = require('../populate');
+
 // set the port
 app.set('port', process.env.PORT || 3000);
 
@@ -23,12 +25,7 @@ db
 				email: 'john-doe@example.org'
             });
 			
-			db.Item.create({
-				name: 'shoe',
-				price: '15000',
-				description: 'a very cheap shoe',
-                tag : 'men, age 20-30'
-			});
+			pop.populate();
 
             var server = app.listen(app.get('port'), function() {
               debug('Express server listening on port ' + server.address().port);

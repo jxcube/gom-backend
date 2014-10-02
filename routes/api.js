@@ -46,22 +46,6 @@ router.route('/item')
 			.success(function(items) {
 				res.json(items);
 			});
-	})
-	
-	.post(function(req,res) {
-		// Create new item entry
-		db.Item.create({
-			name: req.body.name,
-			price: req.body.price,
-			description: req.body.description
-		}).complete(function(err) {
-			if (err) {
-				res.json({ message: 'error' });
-			} else {
-				res.json({ message: 'success'});
-			}
-		});
-		
 	});
 
 module.exports = router;
