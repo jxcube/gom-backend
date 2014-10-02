@@ -19,9 +19,10 @@ module.exports = {
 				// TODO: Create item
 				db.Item.create ({
 					name: item.name,
-					price: item.price,
+					minPrice: item.minPrice,
+					maxPrice: item.maxPrice,
 					description: item.description,
-	                pictureUrl: item.pictureUrl,
+	                imgUrl: item.pictureUrl,
 	                tag : item.tag
 				});
 

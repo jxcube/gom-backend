@@ -2,19 +2,23 @@
 
 {
 	"name": "Laptop",
-	"price": "10000000.00",
+	"minPrice": "10000000.00",
+	"maxPrice": "20000000.00",
 	"description": "A brand new laptop",
 	"imgUrl": "example.org",
-	"tag": 
+	"tag":  
 	[
-		"tech",
-		"laptop"
+		"Teenager",
+		"Adult",
+		"Male",
+		"Female"
 	]
 },
 
 {
 	"name": "Guitar",
-	"price": "500000.00",
+	"minPrice": "500000.00",
+	"maxPrice": "1000000.00",
 	"description": "A brand new guitar",
 	"imgUrl": "example.org",
 	"tag": 
