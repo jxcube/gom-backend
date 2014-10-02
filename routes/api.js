@@ -34,7 +34,7 @@ router.route('/user')
 			if (err) {
 				res.json({ message: 'error' });
 			} else {
-				res.json({ message: 'success'});
+				res.json({ message: 'success'}); 
 			}
 		});
 		
