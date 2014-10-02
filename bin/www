@@ -27,6 +27,7 @@ db
 				name: 'shoe',
 				price: '15000',
 				description: 'a very cheap shoe'
+                tag : 'men, age 20-30'
 			});
 
             var server = app.listen(app.get('port'), function() {
