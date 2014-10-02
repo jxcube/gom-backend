@@ -1,0 +1,27 @@
+[
+
+{
+	"name": "Laptop",
+	"price": "10000000.00",
+	"description": "A brand new laptop",
+	"imgUrl": "example.org",
+	"tag": 
+	[
+		"tech",
+		"laptop"
+	]
+},
+
+{
+	"name": "Guitar",
+	"price": "500000.00",
+	"description": "A brand new guitar",
+	"imgUrl": "example.org",
+	"tag": 
+	[
+		"music",
+		"instrument"
+	]
+}
+
+]
