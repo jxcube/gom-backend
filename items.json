@@ -1,31 +1,645 @@
-[
-
-{
-	"name": "Laptop",
-	"minPrice": "10000000.00",
-	"maxPrice": "20000000.00",
-	"description": "A brand new laptop",
-	"imgUrl": "example.org",
+ [
+ 
+ {
+	// 01
+ 	"name": "Shoes",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "Shoes is the key to a complete look. Help them achieve it by giving a pair of shoes!",
+ 	"imgUrl": "",
 	"tag":  
-	[
+ 	[
+		"Male",
+		"Female",
+		"Kids",
 		"Teenager",
 		"Adult",
+		"Elder",
+		"Fashion",
+		"Birthday"
+ 	]
+ },
+  
+  {
+	// 02
+ 	"name": "Sport Shoes",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "He/she loves sports more than anything? We have a winning gift right here!",
+ 	"imgUrl": "",
+	"tag":  
+ 	[
+		"Male",
+		"Female",
+		"Teenager",
+		"Adult",
+		"Fashion",
+		"Outdoor",
+		"Birthday"
+ 	]
+ },
+ 
+  {
+	// 03
+ 	"name": "High Heels",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "Nice pair of heels is always nice to wear and nice to find in a gift box!",
+ 	"imgUrl": "",
+	"tag":  
+ 	[
+		"Female",
+		"Teenager",
+		"Adult",
+		"Fashion",
+		"Birthday"
+ 	]
+ },
+ 
+  {
+	// 05
+ 	"name": "Shirt",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "Every man and every boy needs unlimited amount of shirt for every possibility everyday.",
+ 	"imgUrl": "",
+	"tag":  
+ 	[
+		"Male",
+		"Teenager",
+		"Adult",
+		"Elder",
+		"Fashion",
+		"Birthday"
+ 	]
+ },
+ 
+  {
+	// 06
+ 	"name": "Dress",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "Don't know what to give to a sweet girl who likes to dress up? A dress it is!",
+ 	"imgUrl": "",
+	"tag":  
+ 	[
+		"Female",
+		"Teenager",
+		"Adult",
+		"Fashion",
+		"Birthday"
+ 	]
+ },
+ 
+  {
+	// 07
+ 	"name": "Jeans",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "You will never go wrong with jeans. Always useful, they'll be grateful.",
+ 	"imgUrl": "",
+	"tag":  
+ 	[
+		"Male",
+		"Female",
+		"Kids",
+		"Teenager",
+		"Adult",
+		"Fashion",
+		"Birthday"
+ 	]
+ },
+ 
+  {
+	// 09
+ 	"name": "Text Book",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "Whether it's a student or someone who just loves to study, text book is all you need.",
+ 	"imgUrl": "",
+	"tag":  
+ 	[
+		"Male",
+		"Female",
+		"Kids",
+		"Teenager",
+		"Adult",
+		"Elder",
+		"",
+		"Birthday"
+ 	]
+ },
+ 
+  {
+	// 10
+ 	"name": "Comic Book",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "Who says comic books are kid's stuff? But it's nice to give to kids too, so everyone wins!",
+ 	"imgUrl": "",
+	"tag":  
+ 	[
+		"Male",
+		"Female",
+		"Kids",
+		"Teenager",
+		"Adult",
+		"Entertainment",
+		"Birthday",
+		"Anniversary"
+ 	]
+ },
+ 
+  {
+	// 11
+ 	"name": "Novel",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "He/she carries books everywhere? Give them something to read, novel is your go-to!",
+ 	"imgUrl": "",
+	"tag":  
+ 	[
+		"Male",
+		"Female",
+		"Teenager",
+		"Adult",
+		"Elder",
+		"Entertainment",
+		"Birthday",
+		"Anniversary"
+ 	]
+ },
+ 
+  {
+	// 12
+ 	"name": "Music CD",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "Music makes people happy. And sometimes it costs quite some so you will help a lot with this.",
+ 	"imgUrl": "",
+	"tag":  
+ 	[
+		"Male",
+		"Female",
+		"Kids",
+		"Teenager",
+		"Adult",
+		"Elder",
+		"Entertainment",
+		"Art",
+		"Birthday"
+ 	]
+ },
+ 
+  {
+	// 13
+ 	"name": "Movie DVD",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "Promised someone to watch a movie but never get the chance to? Problem solved.",
+ 	"imgUrl": "",
+	"tag":  
+ 	[
+		"Male",
+		"Female",
+		"Kids",
+		"Teenager",
+		"Adult",
+		"Elder",
+		"Entertainment",
+		"Birthday",
+		"Anniversary"
+ 	]
+ },
+ 
+  {
+	// 14
+ 	"name": "Handphone",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "Strengthen your bond with a clearer communication, get a brand new cellphone.",
+ 	"imgUrl": "",
+	"tag":  
+ 	[
+		"Male",
+		"Female",
+		"Teenager",
+		"Adult",
+		"Elder",
+		"Technology",
+		"Birthday"
+ 	]
+ },
+ 
+  {
+	// 15
+ 	"name": "Ring",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "Well, if you like it then you should put a ring on it. Let's take it to the next level.",
+ 	"imgUrl": "",
+	"tag":  
+ 	[
+		"Male",
+		"Female",
+		"Teenager",
+		"Adult",
+		"Elder",
+		"Fashion",
+		"Birthday",
+		"Anniversary"
+ 	]
+ },
+ 
+  {
+	// 16
+ 	"name": "Homemade Cooking",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "Nothing says a sincere gift like foods made by none other than you. Spread the love with every bite.",
+ 	"imgUrl": "",
+	"tag":  
+ 	[
+		"Male",
+		"Female",
+		"Kids",
+		"Teenager",
+		"Adult",
+		"Elder",
+		"Food",
+		"Birthday",
+		"Anniversary"
+ 	]
+ },
+ 
+  {
+	// 17
+ 	"name": "Chocolate",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "May it be a sweet gift for anniversary, or just a bribe to stop your loved one from sulking, chocolate will always be the answer.",
+ 	"imgUrl": "",
+	"tag":  
+ 	[
+		"Male",
+		"Female",
+		"Kids",
+		"Teenager",
+		"Adult",
+		"Elder",
+		"Food",
+		"Birthday",
+		"Anniversary"
+ 	]
+ },
+ 
+  {
+	// 18
+ 	"name": "Cake",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "Why cake is the perfect gift? Because it's delicioous, everyone loves it, and it's delicious.",
+ 	"imgUrl": "",
+	"tag":  
+ 	[
+		"Male",
+		"Female",
+		"Kids",
+		"Teenager",
+		"Adult",
+		"Elder",
+		"Food",
+		"Birthday",
+		"Anniversary"
+ 	]
+ },
+  {
+	// 19
+ 	"name": "Flower",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "Girls love flower. Why don't you love giving it? It's affordable and easy to find!",
+ 	"imgUrl": "",
+	"tag":  
+ 	[
+		"Female",
+		"Teenager",
+		"Adult",
+		"Elder",
+		"Outdoor",
+		"Anniversary"
+ 	]
+ },
+ 
+  {
+	// 20
+ 	"name": "Kitchen Utensil",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "For someone who loves cooking, it can't be any more perfect gift than this.",
+ 	"imgUrl": "",
+	"tag":  
+ 	[
+		"Female",
+		"Teenager",
+		"Adult",
+		"Elder",
+		"Food",
+		"Birthday"
+ 	]
+ },
+ 
+  {
+	// 21
+ 	"name": "Dining Equipment",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "",
+ 	"imgUrl": "",
+	"tag":  
+ 	[
+		"Female",
+		"Adult",
+		"Elder",
+		"Food",
+		"Birthday"
+ 	]
+ },
+ 
+  {
+	// 23
+ 	"name": "Make Up",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "Woman can't have too many make-up. Even if you see them stacking, there will always be room for more.",
+ 	"imgUrl": "",
+	"tag":  
+ 	[
+		"Female",
+		"Teenager",
+		"Adult",
+		"Fashion",
+		"Birthday"
+ 	]
+ },
+ 
+  {
+	// 25
+ 	"name": "Plushie",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "Cuddly toy to accompany them during the night? Get one of these cute dolls!",
+ 	"imgUrl": "",
+	"tag":  
+ 	[
+		"Male",
+		"Female",
+		"Kids",
+		"Teenager",
+		"Toys",
+		"Birthday"
+ 	]
+ },
+ 
+  {
+	// 26
+ 	"name": "Pampering Set",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "With a lot of stress and hectic schedule, help them relax by giving this.",
+ 	"imgUrl": "",
+	"tag":  
+ 	[
+		"Male",
+		"Female",
+		"Teenager",
+		"Adult",
+		"Elder",
+		"Anniversary",
+		"Birthday"
+ 	]
+ },
+ 
+  {
+	// 27
+ 	"name": "Wallet",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "Wallet is always the right fi",
+ 	"imgUrl": "",
+	"tag":  
+ 	[
+		"Male",
+		"Female",
+		"Teenager",
+		"Adult",
+		"Elder",
+		"Fashion",
+		"Birthday"
+ 	]
+ },
+ 
+  {
+	// 28
+ 	"name": "Perfume",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "",
+ 	"imgUrl": "",
+	"tag":  
+ 	[
+		"Male",
+		"Female",
+		"Teenager",
+		"Adult",
+		"Fashion",
+		"Birthday"
+ 	]
+ },
+ 
+  {
+	// 29
+ 	"name": "Watch",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "",
+ 	"imgUrl": "",
+	"tag":  
+ 	[
+		"Male",
+		"Female",
+		"Teenager",
+		"Adult",
+		"Elder",
+		"Fashion",
+		"Birthday"
+ 	]
+ },
+ 
+  {
+	// 31
+ 	"name": "Tie",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "",
+ 	"imgUrl": "",
+	"tag":  
+ 	[
+		"Male",
+		"Adult",
+		"Elder",
+		"Fashion"
+		"Birthday"
+ 	]
+ },
+ 
+  {
+	// 33
+ 	"name": "Self-Painting",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "Show they are in your eyes. Low painting skills? Don't worry, it's the thought that counts.",
+ 	"imgUrl": "",
+	"tag":  
+ 	[
+		"Male",
+		"Female",
+		"Kids",
+		"Teenager",
+		"Adult",
+		"Elder",
+		"Art",
+		"Birthday",
+		"Anniversary"
+ 	]
+ },
+ 
+  {
+	// 34
+ 	"name": "Sunglasses",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "",
+ 	"imgUrl": "",
+	"tag":  
+ 	[
+		"Male",
+		"Female",
+		"Teenager",
+		"Adult",
+		"Elder",
+		"Birthday"
+ 	]
+ },
+ 
+  {
+	// 35
+ 	"name": "Fine Dining",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "Splurge a little bit more in a special day for an unforgettable fancy dining!",
+ 	"imgUrl": "",
+	"tag":  
+ 	[
+		"Male",
+		"Female",
+		"Teenager",
+		"Adult",
+		"Elder",
+		"Food",
+		"Birthday",
+		"Anniversary"
+ 	]
+ },
+ 
+  {
+	// 37
+ 	"name": "Guitar",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "",
+ 	"imgUrl": "",
+	"tag":  
+ 	[
+		"Male"
+		"Teenager",
+		"Adult"
+		"Entertainment",
+		"Birthday",
+		"Anniversary"
+ 	]
+ },
+ 
+  {
+	// 39
+ 	"name": "Idol Collectibles",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "Posters? Postcards? Photobooks? Anything with the idol's face on it, they'll love it.",
+ 	"imgUrl": "",
+	"tag":  
+ 	[
 		"Male",
 		"Female"
-	]
-},
+		"Teenager"
+		"Entertainment",
+		"Birthday"
+ 	]
+ },
+ 
+  {
+	// 40
+ 	"name": "Camera",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "",
+ 	"imgUrl": "",
+	"tag":  
+ 	[
+		"Male",
+		"Female",
+		"Teenager",
+		"Adult",
+		"Elder",
+		"Technology",
+		"Birthday"
+ 	]
+ },
+ 
+  {
+	// 41
+ 	"name": "Stationary Set",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "",
+ 	"imgUrl": "",
+	"tag":  
+ 	[
+		"Male",
+		"Female",
+		"Kids",
+		"Teenager",
+		"Birthday"
+ 	]
+ },
+   {
 
-{
-	"name": "Guitar",
-	"minPrice": "500000.00",
-	"maxPrice": "1000000.00",
-	"description": "A brand new guitar",
-	"imgUrl": "example.org",
-	"tag": 
-	[
-		"music",
-		"instrument"
-	]
-}
-
-]
+  {
+	// 42
+ 	"name": "Hamster",
+	"minPrice": "",
+	"maxPrice": "",
+ 	"description": "",
+ 	"imgUrl": "",
+	"tag":  
+ 	[
+		"Male",
+		"Female",
+		"Kids",
+		"Teenager",
+		"Entertainment",
+		"Birthday"
+ 	]
+ },
+ 
+ ]
