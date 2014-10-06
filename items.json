@@ -1,11 +1,11 @@
  [
- 
+
  {
  	"name": "Shoes",
-	"minPrice": "",
-	"maxPrice": "",
+	"minPrice": null,
+	"maxPrice": null,
  	"description": "Shoes is the key to a complete look. Help them achieve it by giving a pair of shoes!",
- 	"imgUrl": "",
+ 	"imgUrl": null,
 	"tag":  
  	[
 		"Male",
@@ -21,10 +21,10 @@
   
   {
  	"name": "Sport Shoes",
-	"minPrice": "",
-	"maxPrice": "",
+	"minPrice": null,
+	"maxPrice": null,
  	"description": "He/she loves sports more than anything? We have a winning gift right here!",
- 	"imgUrl": "",
+ 	"imgUrl": null,
 	"tag":  
  	[
 		"Male",
@@ -39,10 +39,10 @@
  
   {
  	"name": "High Heels",
-	"minPrice": "",
-	"maxPrice": "",
+	"minPrice": null,
+	"maxPrice": null,
  	"description": "Nice pair of heels is always nice to wear and nice to find in a gift box!",
- 	"imgUrl": "",
+ 	"imgUrl": null,
 	"tag":  
  	[
 		"Female",
@@ -55,10 +55,10 @@
  
   {
  	"name": "Shirt",
-	"minPrice": "",
-	"maxPrice": "",
+	"minPrice": null,
+	"maxPrice": null,
  	"description": "Every man and every boy needs unlimited amount of shirt for every possibility everyday.",
- 	"imgUrl": "",
+ 	"imgUrl": null,
 	"tag":  
  	[
 		"Male",
@@ -72,10 +72,10 @@
  
   {
  	"name": "Dress",
-	"minPrice": "",
-	"maxPrice": "",
+	"minPrice": null,
+	"maxPrice": null,
  	"description": "Don't know what to give to a sweet girl who likes to dress up? A dress it is!",
- 	"imgUrl": "",
+ 	"imgUrl": null,
 	"tag":  
  	[
 		"Female",
@@ -88,10 +88,10 @@
  
   {
  	"name": "Jeans",
-	"minPrice": "",
-	"maxPrice": "",
+	"minPrice": null,
+	"maxPrice": null,
  	"description": "You will never go wrong with jeans. Always useful, they'll be grateful.",
- 	"imgUrl": "",
+ 	"imgUrl": null,
 	"tag":  
  	[
 		"Male",
@@ -106,10 +106,10 @@
  
   {
  	"name": "Text Book",
-	"minPrice": "",
-	"maxPrice": "",
+	"minPrice": null,
+	"maxPrice": null,
  	"description": "Whether it's a student or someone who just loves to study, text book is all you need.",
- 	"imgUrl": "",
+ 	"imgUrl": null,
 	"tag":  
  	[
 		"Male",
@@ -118,17 +118,16 @@
 		"Teenager",
 		"Adult",
 		"Elder",
-		"",
 		"Birthday"
  	]
  },
  
   {
  	"name": "Comic Book",
-	"minPrice": "",
-	"maxPrice": "",
+	"minPrice": null,
+	"maxPrice": null,
  	"description": "Who says comic books are kid's stuff? But it's nice to give to kids too, so everyone wins!",
- 	"imgUrl": "",
+ 	"imgUrl": null,
 	"tag":  
  	[
 		"Male",
@@ -144,10 +143,10 @@
  
   {
  	"name": "Novel",
-	"minPrice": "",
-	"maxPrice": "",
+	"minPrice": null,
+	"maxPrice": null,
  	"description": "He/she carries books everywhere? Give them something to read, novel is your go-to!",
- 	"imgUrl": "",
+ 	"imgUrl": null,
 	"tag":  
  	[
 		"Male",
@@ -163,10 +162,10 @@
  
   {
  	"name": "Music CD",
-	"minPrice": "",
-	"maxPrice": "",
+	"minPrice": null,
+	"maxPrice": null,
  	"description": "Music makes people happy. And sometimes it costs quite some so you will help a lot with this.",
- 	"imgUrl": "",
+ 	"imgUrl": null,
 	"tag":  
  	[
 		"Male",
@@ -183,10 +182,10 @@
  
   {
  	"name": "Movie DVD",
-	"minPrice": "",
-	"maxPrice": "",
+	"minPrice": null,
+	"maxPrice": null,
  	"description": "Promised someone to watch a movie but never get the chance to? Problem solved.",
- 	"imgUrl": "",
+ 	"imgUrl": null,
 	"tag":  
  	[
 		"Male",
@@ -203,10 +202,10 @@
  
   {
  	"name": "Handphone",
-	"minPrice": "",
-	"maxPrice": "",
+	"minPrice": null,
+	"maxPrice": null,
  	"description": "Strengthen your bond with a clearer communication, get a brand new cellphone.",
- 	"imgUrl": "",
+ 	"imgUrl": null,
 	"tag":  
  	[
 		"Male",
@@ -221,10 +220,10 @@
  
   {
  	"name": "Ring",
-	"minPrice": "",
-	"maxPrice": "",
+	"minPrice": null,
+	"maxPrice": null,
  	"description": "Well, if you like it then you should put a ring on it. Let's take it to the next level.",
- 	"imgUrl": "",
+ 	"imgUrl": null,
 	"tag":  
  	[
 		"Male",
@@ -240,10 +239,10 @@
  
   {
  	"name": "Homemade Cooking",
-	"minPrice": "",
-	"maxPrice": "",
+	"minPrice": null,
+	"maxPrice": null,
  	"description": "Nothing says a sincere gift like foods made by none other than you. Spread the love with every bite.",
- 	"imgUrl": "",
+ 	"imgUrl": null,
 	"tag":  
  	[
 		"Male",
@@ -260,10 +259,10 @@
  
   {
  	"name": "Chocolate",
-	"minPrice": "",
-	"maxPrice": "",
+	"minPrice": null,
+	"maxPrice": null,
  	"description": "May it be a sweet gift for anniversary, or just a bribe to stop your loved one from sulking, chocolate will always be the answer.",
- 	"imgUrl": "",
+ 	"imgUrl": null,
 	"tag":  
  	[
 		"Male",
@@ -280,10 +279,10 @@
  
   {
  	"name": "Cake",
-	"minPrice": "",
-	"maxPrice": "",
+	"minPrice": null,
+	"maxPrice": null,
  	"description": "Why cake is the perfect gift? Because it's delicioous, everyone loves it, and it's delicious.",
- 	"imgUrl": "",
+ 	"imgUrl": null,
 	"tag":  
  	[
 		"Male",
@@ -299,10 +298,10 @@
  },
   {
  	"name": "Flower",
-	"minPrice": "",
-	"maxPrice": "",
+	"minPrice": null,
+	"maxPrice": null,
  	"description": "Girls love flower. Why don't you love giving it? It's affordable and easy to find!",
- 	"imgUrl": "",
+ 	"imgUrl": null,
 	"tag":  
  	[
 		"Female",
@@ -316,10 +315,10 @@
  
   {
  	"name": "Kitchen Utensil",
-	"minPrice": "",
-	"maxPrice": "",
+	"minPrice": null,
+	"maxPrice": null,
  	"description": "For someone who loves cooking, it can't be any more perfect gift than this.",
- 	"imgUrl": "",
+ 	"imgUrl": null,
 	"tag":  
  	[
 		"Female",
@@ -333,10 +332,10 @@
  
   {
  	"name": "Dining Equipment",
-	"minPrice": "",
-	"maxPrice": "",
- 	"description": "",
- 	"imgUrl": "",
+	"minPrice": null,
+	"maxPrice": null,
+ 	"description": null,
+ 	"imgUrl": null,
 	"tag":  
  	[
 		"Female",
@@ -349,10 +348,10 @@
  
   {
  	"name": "Make Up",
-	"minPrice": "",
-	"maxPrice": "",
+	"minPrice": null,
+	"maxPrice": null,
  	"description": "Woman can't have too many make-up. Even if you see them stacking, there will always be room for more.",
- 	"imgUrl": "",
+ 	"imgUrl": null,
 	"tag":  
  	[
 		"Female",
@@ -365,10 +364,10 @@
  
   {
  	"name": "Plushie",
-	"minPrice": "",
-	"maxPrice": "",
+	"minPrice": null,
+	"maxPrice": null,
  	"description": "Cuddly toy to accompany them during the night? Get one of these cute dolls!",
- 	"imgUrl": "",
+ 	"imgUrl": null,
 	"tag":  
  	[
 		"Male",
@@ -382,10 +381,10 @@
  
   {
  	"name": "Pampering Set",
-	"minPrice": "",
-	"maxPrice": "",
+	"minPrice": null,
+	"maxPrice": null,
  	"description": "With a lot of stress and hectic schedule, help them relax by giving this.",
- 	"imgUrl": "",
+ 	"imgUrl": null,
 	"tag":  
  	[
 		"Male",
@@ -400,10 +399,10 @@
  
   {
  	"name": "Wallet",
-	"minPrice": "",
-	"maxPrice": "",
+	"minPrice": null,
+	"maxPrice": null,
  	"description": "Wallet is always the right gift to every age, every gender, every situation.",
- 	"imgUrl": "",
+ 	"imgUrl": null,
 	"tag":  
  	[
 		"Male",
@@ -418,10 +417,10 @@
  
   {
  	"name": "Perfume",
-	"minPrice": "",
-	"maxPrice": "",
- 	"description": "",
- 	"imgUrl": "",
+	"minPrice": null,
+	"maxPrice": null,
+ 	"description": null,
+ 	"imgUrl": null,
 	"tag":  
  	[
 		"Male",
@@ -435,10 +434,10 @@
  
   {
  	"name": "Watch",
-	"minPrice": "",
-	"maxPrice": "",
+	"minPrice": null,
+	"maxPrice": null,
  	"description": "You will be remembered every time they check time time. It could be every 5 seconds.",
- 	"imgUrl": "",
+ 	"imgUrl": null,
 	"tag":  
  	[
 		"Male",
@@ -453,26 +452,26 @@
  
   {
  	"name": "Tie",
-	"minPrice": "",
-	"maxPrice": "",
+	"minPrice": null,
+	"maxPrice": null,
  	"description": "An easy way to complete a formal look. Classic? Colorful? There's one for every personality!",
- 	"imgUrl": "",
+ 	"imgUrl": null,
 	"tag":  
  	[
 		"Male",
 		"Adult",
 		"Elder",
-		"Fashion"
+		"Fashion",
 		"Birthday"
  	]
  },
  
   {
  	"name": "Self-Painting",
-	"minPrice": "",
-	"maxPrice": "",
+	"minPrice": null,
+	"maxPrice": null,
  	"description": "Show they are in your eyes. Low painting skills? Don't worry, it's the thought that counts.",
- 	"imgUrl": "",
+ 	"imgUrl": null,
 	"tag":  
  	[
 		"Male",
@@ -489,10 +488,10 @@
  
   {
  	"name": "Sunglasses",
-	"minPrice": "",
-	"maxPrice": "",
+	"minPrice": null,
+	"maxPrice": null,
  	"description": "Bright sunlight that bothers their sight? Not a problem!",
- 	"imgUrl": "",
+ 	"imgUrl": null,
 	"tag":  
  	[
 		"Male",
@@ -506,10 +505,10 @@
  
   {
  	"name": "Fine Dining",
-	"minPrice": "",
-	"maxPrice": "",
+	"minPrice": null,
+	"maxPrice": null,
  	"description": "Splurge a little bit more in a special day for an unforgettable fancy dining!",
- 	"imgUrl": "",
+ 	"imgUrl": null,
 	"tag":  
  	[
 		"Male",
@@ -525,15 +524,15 @@
  
   {
  	"name": "Guitar",
-	"minPrice": "",
-	"maxPrice": "",
+	"minPrice": null,
+	"maxPrice": null,
  	"description": "Release the inner musician inside of them. Who knows, it might earn them extra cash.",
- 	"imgUrl": "",
+ 	"imgUrl": null,
 	"tag":  
  	[
-		"Male"
+		"Male",
 		"Teenager",
-		"Adult"
+		"Adult",
 		"Entertainment",
 		"Art",
 		"Birthday",
@@ -543,15 +542,15 @@
  
   {
  	"name": "Idol Collectibles",
-	"minPrice": "",
-	"maxPrice": "",
+	"minPrice": null,
+	"maxPrice": null,
  	"description": "Posters? Postcards? Photobooks? Anything with the idol's face on it, they'll love it.",
- 	"imgUrl": "",
+ 	"imgUrl": null,
 	"tag":  
  	[
 		"Male",
-		"Female"
-		"Teenager"
+		"Female",
+		"Teenager",
 		"Entertainment",
 		"Birthday"
  	]
@@ -559,10 +558,10 @@
  
   {
  	"name": "Camera",
-	"minPrice": "",
-	"maxPrice": "",
+	"minPrice": null,
+	"maxPrice": null,
  	"description": "Capture every precious moments that they have. Some might even incude you!",
- 	"imgUrl": "",
+ 	"imgUrl": null,
 	"tag":  
  	[
 		"Male",
@@ -577,10 +576,10 @@
  
   {
  	"name": "Stationary Set",
-	"minPrice": "",
-	"maxPrice": "",
+	"minPrice": null,
+	"maxPrice": null,
  	"description": "Useful gift and so helpful to everyone who needs to write down stuff in daily basis.",
- 	"imgUrl": "",
+ 	"imgUrl": null,
 	"tag":  
  	[
 		"Male",
@@ -593,10 +592,10 @@
   {
 
  	"name": "Hamster",
-	"minPrice": "",
-	"maxPrice": "",
+	"minPrice": null,
+	"maxPrice": null,
  	"description": "Learn taking responsibilities in a fun way. Cute hamster can be the right way to do it!",
- 	"imgUrl": "",
+ 	"imgUrl": null,
 	"tag":  
  	[
 		"Male",
@@ -606,6 +605,6 @@
 		"Entertainment",
 		"Birthday"
  	]
- },
+ }
  
  ]
