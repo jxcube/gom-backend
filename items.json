@@ -1,7 +1,6 @@
  [
  
  {
-	// 01
  	"name": "Shoes",
 	"minPrice": "",
 	"maxPrice": "",
@@ -21,7 +20,6 @@
  },
   
   {
-	// 02
  	"name": "Sport Shoes",
 	"minPrice": "",
 	"maxPrice": "",
@@ -40,7 +38,6 @@
  },
  
   {
-	// 03
  	"name": "High Heels",
 	"minPrice": "",
 	"maxPrice": "",
@@ -57,7 +54,6 @@
  },
  
   {
-	// 05
  	"name": "Shirt",
 	"minPrice": "",
 	"maxPrice": "",
@@ -75,7 +71,6 @@
  },
  
   {
-	// 06
  	"name": "Dress",
 	"minPrice": "",
 	"maxPrice": "",
@@ -92,7 +87,6 @@
  },
  
   {
-	// 07
  	"name": "Jeans",
 	"minPrice": "",
 	"maxPrice": "",
@@ -111,7 +105,6 @@
  },
  
   {
-	// 09
  	"name": "Text Book",
 	"minPrice": "",
 	"maxPrice": "",
@@ -131,7 +124,6 @@
  },
  
   {
-	// 10
  	"name": "Comic Book",
 	"minPrice": "",
 	"maxPrice": "",
@@ -151,7 +143,6 @@
  },
  
   {
-	// 11
  	"name": "Novel",
 	"minPrice": "",
 	"maxPrice": "",
@@ -171,7 +162,6 @@
  },
  
   {
-	// 12
  	"name": "Music CD",
 	"minPrice": "",
 	"maxPrice": "",
@@ -192,7 +182,6 @@
  },
  
   {
-	// 13
  	"name": "Movie DVD",
 	"minPrice": "",
 	"maxPrice": "",
@@ -213,7 +202,6 @@
  },
  
   {
-	// 14
  	"name": "Handphone",
 	"minPrice": "",
 	"maxPrice": "",
@@ -232,7 +220,6 @@
  },
  
   {
-	// 15
  	"name": "Ring",
 	"minPrice": "",
 	"maxPrice": "",
@@ -252,7 +239,6 @@
  },
  
   {
-	// 16
  	"name": "Homemade Cooking",
 	"minPrice": "",
 	"maxPrice": "",
@@ -273,7 +259,6 @@
  },
  
   {
-	// 17
  	"name": "Chocolate",
 	"minPrice": "",
 	"maxPrice": "",
@@ -294,7 +279,6 @@
  },
  
   {
-	// 18
  	"name": "Cake",
 	"minPrice": "",
 	"maxPrice": "",
@@ -314,7 +298,6 @@
  	]
  },
   {
-	// 19
  	"name": "Flower",
 	"minPrice": "",
 	"maxPrice": "",
@@ -332,7 +315,6 @@
  },
  
   {
-	// 20
  	"name": "Kitchen Utensil",
 	"minPrice": "",
 	"maxPrice": "",
@@ -350,7 +332,6 @@
  },
  
   {
-	// 21
  	"name": "Dining Equipment",
 	"minPrice": "",
 	"maxPrice": "",
@@ -367,7 +348,6 @@
  },
  
   {
-	// 23
  	"name": "Make Up",
 	"minPrice": "",
 	"maxPrice": "",
@@ -384,7 +364,6 @@
  },
  
   {
-	// 25
  	"name": "Plushie",
 	"minPrice": "",
 	"maxPrice": "",
@@ -402,7 +381,6 @@
  },
  
   {
-	// 26
  	"name": "Pampering Set",
 	"minPrice": "",
 	"maxPrice": "",
@@ -421,11 +399,10 @@
  },
  
   {
-	// 27
  	"name": "Wallet",
 	"minPrice": "",
 	"maxPrice": "",
- 	"description": "Wallet is always the right fi",
+ 	"description": "Wallet is always the right gift to every age, every gender, every situation.",
  	"imgUrl": "",
 	"tag":  
  	[
@@ -440,7 +417,6 @@
  },
  
   {
-	// 28
  	"name": "Perfume",
 	"minPrice": "",
 	"maxPrice": "",
@@ -458,11 +434,10 @@
  },
  
   {
-	// 29
  	"name": "Watch",
 	"minPrice": "",
 	"maxPrice": "",
- 	"description": "",
+ 	"description": "You will be remembered every time they check time time. It could be every 5 seconds.",
  	"imgUrl": "",
 	"tag":  
  	[
@@ -477,11 +452,10 @@
  },
  
   {
-	// 31
  	"name": "Tie",
 	"minPrice": "",
 	"maxPrice": "",
- 	"description": "",
+ 	"description": "An easy way to complete a formal look. Classic? Colorful? There's one for every personality!",
  	"imgUrl": "",
 	"tag":  
  	[
@@ -494,7 +468,6 @@
  },
  
   {
-	// 33
  	"name": "Self-Painting",
 	"minPrice": "",
 	"maxPrice": "",
@@ -515,11 +488,10 @@
  },
  
   {
-	// 34
  	"name": "Sunglasses",
 	"minPrice": "",
 	"maxPrice": "",
- 	"description": "",
+ 	"description": "Bright sunlight that bothers their sight? Not a problem!",
  	"imgUrl": "",
 	"tag":  
  	[
@@ -533,7 +505,6 @@
  },
  
   {
-	// 35
  	"name": "Fine Dining",
 	"minPrice": "",
 	"maxPrice": "",
@@ -553,11 +524,10 @@
  },
  
   {
-	// 37
  	"name": "Guitar",
 	"minPrice": "",
 	"maxPrice": "",
- 	"description": "",
+ 	"description": "Release the inner musician inside of them. Who knows, it might earn them extra cash.",
  	"imgUrl": "",
 	"tag":  
  	[
@@ -565,13 +535,13 @@
 		"Teenager",
 		"Adult"
 		"Entertainment",
+		"Art",
 		"Birthday",
 		"Anniversary"
  	]
  },
  
   {
-	// 39
  	"name": "Idol Collectibles",
 	"minPrice": "",
 	"maxPrice": "",
@@ -588,11 +558,10 @@
  },
  
   {
-	// 40
  	"name": "Camera",
 	"minPrice": "",
 	"maxPrice": "",
- 	"description": "",
+ 	"description": "Capture every precious moments that they have. Some might even incude you!",
  	"imgUrl": "",
 	"tag":  
  	[
@@ -607,11 +576,10 @@
  },
  
   {
-	// 41
  	"name": "Stationary Set",
 	"minPrice": "",
 	"maxPrice": "",
- 	"description": "",
+ 	"description": "Useful gift and so helpful to everyone who needs to write down stuff in daily basis.",
  	"imgUrl": "",
 	"tag":  
  	[
@@ -622,14 +590,12 @@
 		"Birthday"
  	]
  },
-   {
+  {
 
-  
-	// 42
  	"name": "Hamster",
 	"minPrice": "",
 	"maxPrice": "",
- 	"description": "",
+ 	"description": "Learn taking responsibilities in a fun way. Cute hamster can be the right way to do it!",
  	"imgUrl": "",
 	"tag":  
  	[
