@@ -10,7 +10,7 @@ router.route('/user')
     // GET /api/user -> all user data
     .get(function(req, res) {
         db.User.findAll({
-            attributes: ['username', 'email']
+            attributes: ['username', 'email','gender']
         })
             .success(function(users) {
                 res.json(users);
@@ -29,7 +29,8 @@ router.route('/user')
 		db.User.create({
 			username: req.body.username,
 			password: req.body.password,
-			email: req.body.email
+			email: req.body.email,
+			gender: req.body.gender
 		}).complete(function(err) {
 			if (err) {
 				res.json({ message: 'error' });
