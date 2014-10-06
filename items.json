@@ -1,7 +1,6 @@
  [
  
  {
-	// 01
  	"name": "Shoes",
 	"minPrice": "",
 	"maxPrice": "",
@@ -21,7 +20,6 @@
  },
   
   {
-	// 02
  	"name": "Sport Shoes",
 	"minPrice": "",
 	"maxPrice": "",
@@ -40,7 +38,6 @@
  },
  
   {
-	// 03
  	"name": "High Heels",
 	"minPrice": "",
 	"maxPrice": "",
@@ -57,7 +54,6 @@
  },
  
   {
-	// 05
  	"name": "Shirt",
 	"minPrice": "",
 	"maxPrice": "",
@@ -75,7 +71,6 @@
  },
  
   {
-	// 06
  	"name": "Dress",
 	"minPrice": "",
 	"maxPrice": "",
@@ -92,7 +87,6 @@
  },
  
   {
-	// 07
  	"name": "Jeans",
 	"minPrice": "",
 	"maxPrice": "",
@@ -111,7 +105,6 @@
  },
  
   {
-	// 09
  	"name": "Text Book",
 	"minPrice": "",
 	"maxPrice": "",
@@ -131,7 +124,6 @@
  },
  
   {
-	// 10
  	"name": "Comic Book",
 	"minPrice": "",
 	"maxPrice": "",
@@ -151,7 +143,6 @@
  },
  
   {
-	// 11
  	"name": "Novel",
 	"minPrice": "",
 	"maxPrice": "",
@@ -171,7 +162,6 @@
  },
  
   {
-	// 12
  	"name": "Music CD",
 	"minPrice": "",
 	"maxPrice": "",
@@ -192,7 +182,6 @@
  },
  
   {
-	// 13
  	"name": "Movie DVD",
 	"minPrice": "",
 	"maxPrice": "",
@@ -213,7 +202,6 @@
  },
  
   {
-	// 14
  	"name": "Handphone",
 	"minPrice": "",
 	"maxPrice": "",
@@ -232,7 +220,6 @@
  },
  
   {
-	// 15
  	"name": "Ring",
 	"minPrice": "",
 	"maxPrice": "",
@@ -252,7 +239,6 @@
  },
  
   {
-	// 16
  	"name": "Homemade Cooking",
 	"minPrice": "",
 	"maxPrice": "",
@@ -273,7 +259,6 @@
  },
  
   {
-	// 17
  	"name": "Chocolate",
 	"minPrice": "",
 	"maxPrice": "",
@@ -294,7 +279,6 @@
  },
  
   {
-	// 18
  	"name": "Cake",
 	"minPrice": "",
 	"maxPrice": "",
@@ -314,7 +298,6 @@
  	]
  },
   {
-	// 19
  	"name": "Flower",
 	"minPrice": "",
 	"maxPrice": "",
@@ -332,7 +315,6 @@
  },
  
   {
-	// 20
  	"name": "Kitchen Utensil",
 	"minPrice": "",
 	"maxPrice": "",
@@ -350,7 +332,6 @@
  },
  
   {
-	// 21
  	"name": "Dining Equipment",
 	"minPrice": "",
 	"maxPrice": "",
@@ -367,7 +348,6 @@
  },
  
   {
-	// 23
  	"name": "Make Up",
 	"minPrice": "",
 	"maxPrice": "",
@@ -384,7 +364,6 @@
  },
  
   {
-	// 25
  	"name": "Plushie",
 	"minPrice": "",
 	"maxPrice": "",
@@ -402,7 +381,6 @@
  },
  
   {
-	// 26
  	"name": "Pampering Set",
 	"minPrice": "",
 	"maxPrice": "",
@@ -421,7 +399,6 @@
  },
  
   {
-	// 27
  	"name": "Wallet",
 	"minPrice": "",
 	"maxPrice": "",
@@ -440,7 +417,6 @@
  },
  
   {
-	// 28
  	"name": "Perfume",
 	"minPrice": "",
 	"maxPrice": "",
@@ -458,7 +434,6 @@
  },
  
   {
-	// 29
  	"name": "Watch",
 	"minPrice": "",
 	"maxPrice": "",
@@ -477,7 +452,6 @@
  },
  
   {
-	// 31
  	"name": "Tie",
 	"minPrice": "",
 	"maxPrice": "",
@@ -494,7 +468,6 @@
  },
  
   {
-	// 33
  	"name": "Self-Painting",
 	"minPrice": "",
 	"maxPrice": "",
@@ -515,7 +488,6 @@
  },
  
   {
-	// 34
  	"name": "Sunglasses",
 	"minPrice": "",
 	"maxPrice": "",
@@ -533,7 +505,6 @@
  },
  
   {
-	// 35
  	"name": "Fine Dining",
 	"minPrice": "",
 	"maxPrice": "",
@@ -553,7 +524,6 @@
  },
  
   {
-	// 37
  	"name": "Guitar",
 	"minPrice": "",
 	"maxPrice": "",
@@ -572,7 +542,6 @@
  },
  
   {
-	// 39
  	"name": "Idol Collectibles",
 	"minPrice": "",
 	"maxPrice": "",
@@ -589,7 +558,6 @@
  },
  
   {
-	// 40
  	"name": "Camera",
 	"minPrice": "",
 	"maxPrice": "",
@@ -608,7 +576,6 @@
  },
  
   {
-	// 41
  	"name": "Stationary Set",
 	"minPrice": "",
 	"maxPrice": "",
@@ -626,7 +593,6 @@
    {
 
   {
-	// 42
  	"name": "Hamster",
 	"minPrice": "",
 	"maxPrice": "",
