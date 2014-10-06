@@ -425,7 +425,7 @@
  	"name": "Wallet",
 	"minPrice": "",
 	"maxPrice": "",
- 	"description": "Wallet is always the right fi",
+ 	"description": "Wallet is always the right gift to every age, every gender, every situation.",
  	"imgUrl": "",
 	"tag":  
  	[
@@ -462,7 +462,7 @@
  	"name": "Watch",
 	"minPrice": "",
 	"maxPrice": "",
- 	"description": "",
+ 	"description": "You will be remembered every time they check time time. It could be every 5 seconds.",
  	"imgUrl": "",
 	"tag":  
  	[
@@ -481,7 +481,7 @@
  	"name": "Tie",
 	"minPrice": "",
 	"maxPrice": "",
- 	"description": "",
+ 	"description": "An easy way to complete a formal look. Classic? Colorful? There's one for every personality!",
  	"imgUrl": "",
 	"tag":  
  	[
@@ -519,7 +519,7 @@
  	"name": "Sunglasses",
 	"minPrice": "",
 	"maxPrice": "",
- 	"description": "",
+ 	"description": "Bright sunlight that bothers their sight? Not a problem!",
  	"imgUrl": "",
 	"tag":  
  	[
@@ -557,7 +557,7 @@
  	"name": "Guitar",
 	"minPrice": "",
 	"maxPrice": "",
- 	"description": "",
+ 	"description": "Release the inner musician inside of them. Who knows, it might earn them extra cash.",
  	"imgUrl": "",
 	"tag":  
  	[
@@ -565,6 +565,7 @@
 		"Teenager",
 		"Adult"
 		"Entertainment",
+		"Art",
 		"Birthday",
 		"Anniversary"
  	]
@@ -592,7 +593,7 @@
  	"name": "Camera",
 	"minPrice": "",
 	"maxPrice": "",
- 	"description": "",
+ 	"description": "Capture every precious moments that they have. Some might even incude you!",
  	"imgUrl": "",
 	"tag":  
  	[
@@ -611,7 +612,7 @@
  	"name": "Stationary Set",
 	"minPrice": "",
 	"maxPrice": "",
- 	"description": "",
+ 	"description": "Useful gift and so helpful to everyone who needs to write down stuff in daily basis.",
  	"imgUrl": "",
 	"tag":  
  	[
@@ -629,7 +630,7 @@
  	"name": "Hamster",
 	"minPrice": "",
 	"maxPrice": "",
- 	"description": "",
+ 	"description": "Learn taking responsibilities in a fun way. Cute hamster can be the right way to do it!",
  	"imgUrl": "",
 	"tag":  
  	[
