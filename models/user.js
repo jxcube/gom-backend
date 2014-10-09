@@ -19,6 +19,14 @@ module.exports = function(sequelize, DataTypes) {
                     },
                     attributes: ['username', 'email', 'password']
                 });
+            },
+            getByUsername: function(username){
+                return this.find({
+                    where: {
+                        username: username
+                    },
+                    attributes: ['username', 'email', 'password']
+                });
             }
         }
     });
