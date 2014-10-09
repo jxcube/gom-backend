@@ -23,6 +23,7 @@ router.route('/user')
 				message: 'error',
 				detail: 'please provide complete information'
 			});
+            return;
 		}
 
 		// Create new user entry

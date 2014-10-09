@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 
 // import the route files
 var api = require('./routes/api');
+var auth = require('./routes/auth');
 
 var app = express();
 
@@ -17,6 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // set up the route
 app.use('/', api);
+app.use('/auth', auth);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

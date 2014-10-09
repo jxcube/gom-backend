@@ -10,5 +10,16 @@ module.exports = function(sequelize, DataTypes) {
         password: DataTypes.STRING,
 		email: DataTypes.STRING,
 		gender: DataTypes.STRING
+    }, {
+        classMethods: {
+            getByEmail: function(email) {
+                return this.find({
+                    where: {
+                        email: email
+                    },
+                    attributes: ['username', 'email', 'password']
+                });
+            }
+        }
     });
 }
