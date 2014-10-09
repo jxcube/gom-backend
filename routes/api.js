@@ -48,6 +48,12 @@ router.route('/item')
 			.success(function(items) {
 				res.json(items);
 			});
-	});
+	})
+router.route('/item/random')
+	.get(function(req,res){
+		db.Item.getRandom(function(item) {
+			res.json(item);
+		});
+	})
 
 module.exports = router;

@@ -24,7 +24,6 @@ db
                 password: 'secret',
 				email: 'john-doe@example.org',
                 gender: 'male'
-
             });
 			
 			pop.populate();
