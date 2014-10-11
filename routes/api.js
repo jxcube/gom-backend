@@ -18,7 +18,7 @@ router.route('/user')
     })
 	
 	.post(function(req,res) {
-		if (!(req.body.username && req.body.password && req.body.email && req.body.gender) {
+		if (!(req.body.username && req.body.password && req.body.email && req.body.gender)) {
 			res.json({
 				message: 'error',
 				detail: 'please provide complete information'
