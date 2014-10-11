@@ -27,8 +27,10 @@ router.route('/login')
                         });
                     } else {
                         res.json({
-                            message: 'success'
-                        })
+                            message: 'success',
+                            username: user.username,
+                            email: user.email
+                        });
                     }
                 }
             }).error(function(err) {
