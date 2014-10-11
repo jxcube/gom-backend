@@ -29,3 +29,5 @@ config
 .lock-wscript
 
 sh.exe.stackdump
+
+.DS_Store
