@@ -26,6 +26,7 @@ router.route('/user')
             return;
 		}
 
+
 		// Create new user entry
 		db.User.create({
 			username: req.body.username,
@@ -34,7 +35,10 @@ router.route('/user')
 			gender: req.body.gender
 		}).complete(function(err) {
 			if (err) {
-				res.json({ message: 'error' });
+				res.json({
+					message: 'error',
+					detail : 'username / email already exist'
+				});
 			} else {
 				res.json({ message: 'success'}); 
 			}
