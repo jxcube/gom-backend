@@ -6,7 +6,19 @@ var model =function(sequelize,DataTypes){
 		description: DataTypes.TEXT,
 		imgUrl: DataTypes.STRING,
 		tag : DataTypes.ARRAY(DataTypes.STRING)
-	}, {});
+	}, {
+		classMethods: {
+			getRandom : function(callback)
+			{
+				this.findAll().success(function(items){
+					callback(items[Math.floor(Math.random()*items.length)]);
+				});
+			}
+		} 
+
+	});
+
 	return Item;
+
 }
 module.exports = model;

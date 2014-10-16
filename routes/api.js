@@ -18,12 +18,14 @@ router.route('/user')
     })
 	
 	.post(function(req,res) {
-		if (!(req.body.username && req.body.password && req.body.email)) {
+		if (!(req.body.username && req.body.password && req.body.email && req.body.gender)) {
 			res.json({
 				message: 'error',
 				detail: 'please provide complete information'
 			});
+            return;
 		}
+
 
 		// Create new user entry
 		db.User.create({
@@ -33,7 +35,10 @@ router.route('/user')
 			gender: req.body.gender
 		}).complete(function(err) {
 			if (err) {
-				res.json({ message: 'error' });
+				res.json({
+					message: 'error',
+					detail : 'username / email already exist'
+				});
 			} else {
 				res.json({ message: 'success'}); 
 			}
@@ -47,6 +52,12 @@ router.route('/item')
 			.success(function(items) {
 				res.json(items);
 			});
-	});
+	})
+router.route('/item/random')
+	.get(function(req,res){
+		db.Item.getRandom(function(item) {
+			res.json(item);
+		});
+	})
 
 module.exports = router;

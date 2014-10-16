@@ -22,7 +22,8 @@ db
             db.User.create({
                 username: 'Joko Doe',
                 password: 'secret',
-				email: 'john-doe@example.org'
+				email: 'john-doe@example.org',
+                gender: 'male'
             });
 			
 			pop.populate();
