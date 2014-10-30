@@ -5,7 +5,7 @@
 	"minPrice": "100000",
 	"maxPrice": "2000000",
  	"description": "Shoes is the key to a complete look. Help them achieve it by giving a pair of shoes!",
- 	"imgUrl": null,
+ 	"imgUrl": "001.jpg",
 	"tag":  
  	[
 		"Male",
@@ -24,7 +24,7 @@
 	"minPrice": "200000",
 	"maxPrice": "2000000",
  	"description": "He/she loves sports more than anything? We have a winning gift right here!",
- 	"imgUrl": null,
+ 	"imgUrl": "002.jpg",
 	"tag":  
  	[
 		"Male",
@@ -42,7 +42,7 @@
 	"minPrice": "150000",
 	"maxPrice": "2000000",
  	"description": "Nice pair of heels is always nice to wear and nice to find in a gift box!",
- 	"imgUrl": null,
+ 	"imgUrl": "003.jpg",
 	"tag":  
  	[
 		"Female",
@@ -58,7 +58,7 @@
 	"minPrice": "125000",
 	"maxPrice": "750000",
  	"description": "Every man and every boy needs unlimited amount of shirt for every possibility everyday.",
- 	"imgUrl": null,
+ 	"imgUrl": "005.jpg",
 	"tag":  
  	[
 		"Male",
@@ -75,7 +75,7 @@
 	"minPrice": "100000",
 	"maxPrice": "1000000",
  	"description": "Don't know what to give to a sweet girl who likes to dress up? A dress it is!",
- 	"imgUrl": null,
+ 	"imgUrl": "006.jpg",
 	"tag":  
  	[
 		"Female",
@@ -91,7 +91,7 @@
 	"minPrice": "200000",
 	"maxPrice": "800000",
  	"description": "You will never go wrong with jeans. Always useful, they'll be grateful.",
- 	"imgUrl": null,
+ 	"imgUrl": "007.jpg",
 	"tag":  
  	[
 		"Male",
@@ -109,7 +109,7 @@
 	"minPrice": "100000",
 	"maxPrice": "1000000",
  	"description": "Whether it's a student or someone who just loves to study, text book is all you need.",
- 	"imgUrl": null,
+ 	"imgUrl": "009.jpg",
 	"tag":  
  	[
 		"Male",
@@ -127,7 +127,7 @@
 	"minPrice": "18000",
 	"maxPrice": "400000",
  	"description": "Who says comic books are kid's stuff? But it's nice to give to kids too, so everyone wins!",
- 	"imgUrl": null,
+ 	"imgUrl": "010.jpg",
 	"tag":  
  	[
 		"Male",
@@ -146,7 +146,7 @@
 	"minPrice": "50000",
 	"maxPrice": "450000",
  	"description": "He/she carries books everywhere? Give them something to read, novel is your go-to!",
- 	"imgUrl": null,
+ 	"imgUrl": "011.jpg",
 	"tag":  
  	[
 		"Male",
@@ -165,7 +165,7 @@
 	"minPrice": "75000",
 	"maxPrice": "500000",
  	"description": "Music makes people happy. And sometimes it costs quite some so you will help a lot with this.",
- 	"imgUrl": null,
+ 	"imgUrl": "012.jpg",
 	"tag":  
  	[
 		"Male",
@@ -185,7 +185,7 @@
 	"minPrice": "7000",
 	"maxPrice": "200000",
  	"description": "Promised someone to watch a movie but never get the chance to? Problem solved.",
- 	"imgUrl": null,
+ 	"imgUrl": "013.jpg",
 	"tag":  
  	[
 		"Male",
@@ -205,7 +205,7 @@
 	"minPrice": "100000",
 	"maxPrice": "10000000",
  	"description": "Strengthen your bond with a clearer communication, get a brand new cellphone.",
- 	"imgUrl": null,
+ 	"imgUrl": "014.jpg",
 	"tag":  
  	[
 		"Male",
@@ -223,7 +223,7 @@
 	"minPrice": "500000",
 	"maxPrice": "7000000",
  	"description": "Well, if you like it then you should put a ring on it. Let's take it to the next level.",
- 	"imgUrl": null,
+ 	"imgUrl": "015.jpg",
 	"tag":  
  	[
 		"Male",
@@ -242,7 +242,7 @@
 	"minPrice": "0",
 	"maxPrice": "150000",
  	"description": "Nothing says a sincere gift like foods made by none other than you. Spread the love with every bite.",
- 	"imgUrl": null,
+ 	"imgUrl": "016.jpg",
 	"tag":  
  	[
 		"Male",
@@ -262,7 +262,7 @@
 	"minPrice": "45000",
 	"maxPrice": "200000",
  	"description": "May it be a sweet gift for anniversary, or just a bribe to stop your loved one from sulking, chocolate will always be the answer.",
- 	"imgUrl": null,
+ 	"imgUrl": "017.jpg",
 	"tag":  
  	[
 		"Male",
@@ -282,7 +282,7 @@
 	"minPrice": "125000",
 	"maxPrice": "1000000",
  	"description": "Why cake is the perfect gift? Because it's delicioous, everyone loves it, and it's delicious.",
- 	"imgUrl": null,
+ 	"imgUrl": "018.jpg",
 	"tag":  
  	[
 		"Male",
@@ -301,7 +301,7 @@
 	"minPrice": "15000",
 	"maxPrice": "250000",
  	"description": "Girls love flower. Why don't you love giving it? It's affordable and easy to find!",
- 	"imgUrl": null,
+ 	"imgUrl": "019.jpg",
 	"tag":  
  	[
 		"Female",
@@ -318,7 +318,7 @@
 	"minPrice": "50000",
 	"maxPrice": "650000",
  	"description": "For someone who loves cooking, it can't be any more perfect gift than this.",
- 	"imgUrl": null,
+ 	"imgUrl": "020.jpg",
 	"tag":  
  	[
 		"Female",
@@ -335,7 +335,7 @@
 	"minPrice": "75000",
 	"maxPrice": "250000",
  	"description": "Plates? Glasses? Spoons? All those fancy dining stuff? Who wouldn't want those?",
- 	"imgUrl": null,
+ 	"imgUrl": "021.jpg",
 	"tag":  
  	[
 		"Female",
@@ -351,7 +351,7 @@
 	"minPrice": "45000",
 	"maxPrice": "250000",
  	"description": "Woman can't have too many make-up. Even if you see them stacking, there will always be room for more.",
- 	"imgUrl": null,
+ 	"imgUrl": "023.jpg",
 	"tag":  
  	[
 		"Female",
@@ -367,7 +367,7 @@
 	"minPrice": "20000",
 	"maxPrice": "500000",
  	"description": "Cuddly toy to accompany them during the night? Get one of these cute dolls!",
- 	"imgUrl": null,
+ 	"imgUrl": "025.jpg",
 	"tag":  
  	[
 		"Male",
@@ -384,7 +384,7 @@
 	"minPrice": "100000",
 	"maxPrice": "750000",
  	"description": "With a lot of stress and hectic schedule, help them relax by giving this.",
- 	"imgUrl": null,
+ 	"imgUrl": "026.jpg",
 	"tag":  
  	[
 		"Male",
@@ -402,7 +402,7 @@
 	"minPrice": "150000",
 	"maxPrice": "850000",
  	"description": "Wallet is always the right gift to every age, every gender, every situation.",
- 	"imgUrl": null,
+ 	"imgUrl": "027.jpg",
 	"tag":  
  	[
 		"Male",
@@ -420,7 +420,7 @@
 	"minPrice": "250000",
 	"maxPrice": "1500000",
  	"description": "Perfume has been a top go-to gifts of all ages. Why not stick to it?",
- 	"imgUrl": null,
+ 	"imgUrl": "028.jpg",
 	"tag":  
  	[
 		"Male",
@@ -437,7 +437,7 @@
 	"minPrice": "250000",
 	"maxPrice": "2500000",
  	"description": "You will be remembered every time they check time time. It could be every 5 seconds.",
- 	"imgUrl": null,
+ 	"imgUrl": "029.jpg",
 	"tag":  
  	[
 		"Male",
@@ -455,7 +455,7 @@
 	"minPrice": "50000",
 	"maxPrice": "400000",
  	"description": "An easy way to complete a formal look. Classic? Colorful? There's one for every personality!",
- 	"imgUrl": null,
+ 	"imgUrl": "031.jpg",
 	"tag":  
  	[
 		"Male",
@@ -471,7 +471,7 @@
 	"minPrice": "0",
 	"maxPrice": "150000",
  	"description": "Show they are in your eyes. Low painting skills? Don't worry, it's the thought that counts.",
- 	"imgUrl": null,
+ 	"imgUrl": "033.jpg",
 	"tag":  
  	[
 		"Male",
@@ -491,7 +491,7 @@
 	"minPrice": "150000",
 	"maxPrice": "1500000",
  	"description": "Bright sunlight that bothers their sight? Not a problem!",
- 	"imgUrl": null,
+ 	"imgUrl": "034.jpg",
 	"tag":  
  	[
 		"Male",
@@ -508,7 +508,7 @@
 	"minPrice": "500000",
 	"maxPrice": "2500000",
  	"description": "Splurge a little bit more in a special day for an unforgettable fancy dining!",
- 	"imgUrl": null,
+ 	"imgUrl": "035.jpg",
 	"tag":  
  	[
 		"Male",
@@ -527,7 +527,7 @@
 	"minPrice": "500000",
 	"maxPrice": "5500000",
  	"description": "Release the inner musician inside of them. Who knows, it might earn them extra cash.",
- 	"imgUrl": null,
+ 	"imgUrl": "037.jpg",
 	"tag":  
  	[
 		"Male",
@@ -545,7 +545,7 @@
 	"minPrice": "75000",
 	"maxPrice": "500000",
  	"description": "Posters? Postcards? Photobooks? Anything with the idol's face on it, they'll love it.",
- 	"imgUrl": null,
+ 	"imgUrl": "039.jpg",
 	"tag":  
  	[
 		"Male",
@@ -561,7 +561,7 @@
 	"minPrice": "250000",
 	"maxPrice": "17500000",
  	"description": "Capture every precious moments that they have. Some might even incude you!",
- 	"imgUrl": null,
+ 	"imgUrl": "040.jpg",
 	"tag":  
  	[
 		"Male",
@@ -579,7 +579,7 @@
 	"minPrice": "50000",
 	"maxPrice": "450000",
  	"description": "Useful gift and so helpful to everyone who needs to write down stuff in daily basis.",
- 	"imgUrl": null,
+ 	"imgUrl": "041.jpg",
 	"tag":  
  	[
 		"Male",
@@ -595,7 +595,7 @@
 	"minPrice": "30000",
 	"maxPrice": "120000",
  	"description": "Learn taking responsibilities in a fun way. Cute hamster can be the right way to do it!",
- 	"imgUrl": null,
+ 	"imgUrl": "042.jpg",
 	"tag":  
  	[
 		"Male",
@@ -612,7 +612,7 @@
 	"minPrice": "750000",
 	"maxPrice": "20000000",
   	"description": "Fun gift for healthy personality? Two benefits all at once!",
- 	"imgUrl": null,
+ 	"imgUrl": "043.jpg",
  	"tag":  
   	[
  		"Male",
@@ -631,7 +631,7 @@
 	"minPrice": "100000",
 	"maxPrice": "250000",
   	"description": "Instant fun, everywhere, everytime.",
- 	"imgUrl": null,
+ 	"imgUrl": "044.jpg",
  	"tag":  
   	[
  		"Male",
@@ -648,7 +648,7 @@
 	"minPrice": "100000",
 	"maxPrice": "500000",
   	"description": "Accidents happen when you least expect it. A box ful of tools for every worst scenario that might happen.",
- 	"imgUrl": null,
+ 	"imgUrl": "046.jpg",
  	"tag":  
   	[
  		"Male",
@@ -663,7 +663,7 @@
 	"minPrice": "75000",
 	"maxPrice": "450000",
   	"description": "Make food on the go become something good to look at. Extra point for food inside!",
- 	"imgUrl": null,
+ 	"imgUrl": "048.jpg",
  	"tag":  
   	[
  		"Male",
@@ -680,7 +680,7 @@
 	"minPrice": "50000",
 	"maxPrice": "450000",
   	"description": "Make sure everything is on time. Haunt them who love to be late with every ticking second.",
- 	"imgUrl": null,
+ 	"imgUrl": "050.jpg",
  	"tag":  
   	[
  		"Male",
@@ -696,7 +696,7 @@
 	"minPrice": "350000",
 	"maxPrice": "4000000",
   	"description": "A new member of the family! Take the cutie everywhere in style!",
- 	"imgUrl": null,
+ 	"imgUrl": "052.jpg",
  	"tag":  
   	[
  		"Male",
@@ -711,7 +711,7 @@
 	"minPrice": "75000",
 	"maxPrice": "2500000",
   	"description": "For the times when they just want to be alone, or just simply to cherish good music.",
- 	"imgUrl": null,
+ 	"imgUrl": "053.jpg",
  	"tag":  
   	[
  		"Male",
@@ -729,7 +729,7 @@
 	"minPrice": "0",
 	"maxPrice": "150000",
   	"description": "Easy, quick, but thoughtful and touchy. Whatever comes from heart will guaranteed be the favorite!",
- 	"imgUrl": null,
+ 	"imgUrl": "054.jpg",
  	"tag":  
   	[
  		"Male",
@@ -749,7 +749,7 @@
 	"minPrice": "250000",
 	"maxPrice": "1000000",
   	"description": "For a person who takes anything seriously? Splurge a bit more to show professionalism in every letter.",
- 	"imgUrl": null,
+ 	"imgUrl": "055.jpg",
  	"tag":  
   	[
  		"Male",
@@ -765,7 +765,7 @@
 	"minPrice": "150000",
 	"maxPrice": "750000",
   	"description": "",
- 	"imgUrl": null,
+ 	"imgUrl": "060.jpg",
  	"tag":  
   	[
  		"Male",
@@ -784,7 +784,7 @@
 	"minPrice": "500000",
 	"maxPrice": "10000000",
   	"description": "Getaway! Fun places! They'll thank you for the sweet quick escape from routines.",
- 	"imgUrl": null,
+ 	"imgUrl": "61.jpg",
  	"tag":  
   	[
  		"Male",
@@ -803,7 +803,7 @@
 	"minPrice": "200000",
 	"maxPrice": "3500000",
   	"description": "Who doesn't love concert? Get closer to t",
- 	"imgUrl": null,
+ 	"imgUrl": "063.jpg",
  	"tag":  
   	[
  		"Male",
@@ -820,7 +820,7 @@
 	"minPrice": "1500000",
 	"maxPrice": "12000000",
   	"description": "From big player to portable console, guarantee fun time with games in every day they have.",
- 	"imgUrl": null,
+ 	"imgUrl": "065.jpg",
  	"tag":  
   	[
  		"Male",
@@ -836,7 +836,7 @@
 	"minPrice": "125000",
 	"maxPrice": "750000",
   	"description": "A deck of tarot card will always be a fun gift. Release the inner psychic in them!",
- 	"imgUrl": null,
+ 	"imgUrl": "067.jpg",
  	"tag":  
   	[
  		"Male",
@@ -870,7 +870,7 @@
   	"name": "Gift Voucher",
 	"minPrice": "50000",
 	"maxPrice": "1500000",
-  	"description": "",
+  	"description": "Why risk getting a prize that they won't like? Let them buy what they desire instead!",
  	"imgUrl": null,
  	"tag": 
   	[
