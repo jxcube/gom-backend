@@ -9,5 +9,4 @@ module.exports = function(sequelize, Datatypes){
 }
 
 
-module.exports = model;
 
