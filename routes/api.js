@@ -60,4 +60,42 @@ router.route('/item/random')
 		});
 	})
 
+
+router.route('/thread')
+	.get(function(req,res) {
+		db.Thread.findAll()
+			.success(function(threads){
+				res.json(threads);
+			});
+	})
+	.post(function(req,res) {
+		db.Thread.create({
+			title : req.body.title,
+			username: req.body.username,
+			description : req.body.description
+		}).complete(function(thread){
+			res.json({message : 'success'});
+		});
+	})
+	
+router.route('/post')
+	.get(function(req,res){
+		db.Post.findAll()
+			.success(function(posts){
+				res.json(posts);
+			});
+	})
+	.post(function(req,res){
+		db.Post.create({
+			title : req.body.title,
+			username: req.body.username,
+			itemName : req.body.itemName,
+			price : req.body.price
+		}).complete(function(post){
+			res.json({message : 'success'});
+		})
+	});
+	
+
+
 module.exports = router;
