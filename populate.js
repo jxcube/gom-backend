@@ -22,7 +22,7 @@ module.exports = {
 					minPrice: item.minPrice,
 					maxPrice: item.maxPrice,
 					description: item.description,
-	                imgUrl: item.pictureUrl,
+	                imgUrl: item.imgUrl,
 	                tag : item.tag
 				});
 
