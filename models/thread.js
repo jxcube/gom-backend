@@ -4,6 +4,10 @@ module.exports = function(sequelize, Datatypes){
         username : Datatypes.STRING,
         description : Datatypes.TEXT
     });
+
+    Thread
+        .belongsTo(User)
+        .hasMany(Post)
 }
 
 

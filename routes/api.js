@@ -95,7 +95,43 @@ router.route('/post')
 			res.json({message : 'success'});
 		})
 	});
-	
 
+router.route('/developer')
+    .get(function(req, res) {
+        db.Developer.findAll({
+            attributes: ['username', 'email','companyName']
+        })
+            .success(function(developers) {
+                res.json(developers);
+            });
+    })
+	
+	.post(function(req,res) {
+		if (!(req.body.username && req.body.password && req.body.email && req.body.companyName)) {
+			res.json({
+				message: 'error',
+				detail: 'please provide complete information'
+			});
+            return;
+		}
+
+		// Create new developer entry
+		db.Developer.create({
+			username: req.body.username,
+			password: req.body.password,
+			email: req.body.email,
+			companyName: req.body.companyName
+		}).complete(function(err) {
+			if (err) {
+				res.json({
+					message: 'error',
+					detail : 'username / email already exist'
+				});
+			} else {
+				res.json({ message: 'success'}); 
+			}
+		});
+		
+	});
 
 module.exports = router;

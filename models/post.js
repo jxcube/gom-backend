@@ -5,6 +5,9 @@ module.exports = function(sequelize, Datatypes){
         itemName : Datatypes.TEXT,
         price : Datatypes.DECIMAL(15,2)
     });
+    Post
+        .belongsTo(User)
+        .hasOne(Thread)
 
 }
 
