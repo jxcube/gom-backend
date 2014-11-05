@@ -63,18 +63,42 @@ router.route('/item/random')
 
 router.route('/thread')
 	.get(function(req,res) {
-		db.Thread.findAll()
+		db.Thread.findAll({
+			include: [{
+				model: db.Post,
+				attributes: ['id', 'title', 'content', 'createdAt'],
+				include: [{
+					model: db.User,
+					attributes: ['id','username']
+				}]
+			}]
+		})
 			.success(function(threads){
 				res.json(threads);
 			});
 	})
 	.post(function(req,res) {
 		db.Thread.create({
-			title : req.body.title,
-			username: req.body.username,
-			description : req.body.description
-		}).complete(function(thread){
-			res.json({message : 'success'});
+			title: req.body.title
+		}).complete(function(err, thread){
+			db.Post.create({
+				title: req.body.title,
+				content: req.body.content
+			}).complete(function(err, post) {
+				post.setThread(thread);
+				db.User.find({
+					where: {
+						username: req.body.username
+					}
+				}).complete(function(err, user) {
+					if (!user) {
+						res.json({ message: 'user not found' });
+					} else {
+						post.setUser(user);
+						res.json({ message: 'success' });
+					}
+				})
+			});
 		});
 	})
 	
@@ -88,11 +112,31 @@ router.route('/post')
 	.post(function(req,res){
 		db.Post.create({
 			title : req.body.title,
-			username: req.body.username,
-			itemName : req.body.itemName,
-			price : req.body.price
-		}).complete(function(post){
-			res.json({message : 'success'});
+			content: req.body.content
+		}).complete(function(err, post){
+			db.Thread.find({
+				where: {
+					id: req.body.threadid
+				}
+			}).complete(function(err, thread) {
+				if (!thread) {
+					res.json({ message: 'no thread found'});
+				} else {
+					post.setThread(thread);
+					db.User.find({
+						where: {
+							id: req.body.userid
+						}
+					}).complete(function(err, user) {
+						if (!user) {
+							res.json({ message: 'no user found'});
+						} else {
+							post.setUser(user);
+							res.json({ message: 'success'});
+						}
+					});
+				}
+			});
 		})
 	});
 

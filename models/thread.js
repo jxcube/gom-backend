@@ -1,7 +1,6 @@
 module.exports = function(sequelize, Datatypes){
     var Thread = sequelize.define('Thread',{
-        title: Datatypes.STRING,
-        description: Datatypes.TEXT
+        title: Datatypes.STRING
     }, {
         classMethods: {
             associate: function(models) {
