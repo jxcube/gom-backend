@@ -78,6 +78,13 @@ router.route('/thread')
 			});
 	})
 	.post(function(req,res) {
+		if (!(req.body.title && req.body.content && req.body.username)){
+			res.json({
+				message : 'error',
+				detail : 'please provide title and content'
+			});
+			return;
+		}
 		db.Thread.create({
 			title: req.body.title
 		}).complete(function(err, thread){
@@ -110,6 +117,13 @@ router.route('/post')
 			});
 	})
 	.post(function(req,res){
+		if (!(req.body.title && req.body.content)){
+			res.json({
+				message : 'error',
+				detail : 'please provide title and content'
+			});
+			return;
+		}
 		db.Post.create({
 			title : req.body.title,
 			content: req.body.content
