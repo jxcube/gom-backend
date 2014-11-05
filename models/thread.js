@@ -1,13 +1,14 @@
 module.exports = function(sequelize, Datatypes){
-    return sequelize.define('Thread',{
-        title : Datatypes.STRING,
-        username : Datatypes.STRING,
-        description : Datatypes.TEXT
+    var Thread = sequelize.define('Thread',{
+        title: Datatypes.STRING,
+        description: Datatypes.TEXT
+    }, {
+        classMethods: {
+            associate: function(models) {
+                Thread.hasMany(models.Post);
+            }
+        }
     });
-
-    Thread
-        .belongsTo(User)
-        .hasMany(Post)
 }
 
 

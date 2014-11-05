@@ -1,13 +1,15 @@
 module.exports = function(sequelize, Datatypes){
-    return sequelize.define('Post',{
+    var Post = sequelize.define('Post',{
         title : Datatypes.STRING,
-        username : Datatypes.STRING,
-        itemName : Datatypes.TEXT,
-        price : Datatypes.DECIMAL(15,2)
+        content: Datatypes.TEXT
+    }, {
+        classMethods: {
+            associate: function(models) {
+                Post.belongsTo(models.Thread);
+                Post.belongsTo(models.User);
+            }
+        }
     });
-    Post
-        .belongsTo(User)
-        .hasOne(Thread)
 
 }
 

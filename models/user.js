@@ -5,13 +5,16 @@
 * Coded by: Yonas Reynald D. N.
 */
 module.exports = function(sequelize, DataTypes) {
-    return sequelize.define('User', {
+    var User = sequelize.define('User', {
         username: {type : DataTypes.STRING, unique : true},
         password: DataTypes.STRING,
 		email: {type : DataTypes.STRING, unique : true},
 		gender: DataTypes.STRING
     }, {
         classMethods: {
+            associate: function(models) {
+                User.hasMany(models.Post);
+            },
             getByEmail: function(email) {
                 return this.find({
                     where: {
@@ -30,4 +33,6 @@ module.exports = function(sequelize, DataTypes) {
             }
         }
     });
+
+    return User;
 }
