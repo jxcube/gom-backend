@@ -108,6 +108,32 @@ router.route('/thread')
 			});
 		});
 	})
+
+router.route('/thread/:id')
+	.get(function(req, res) {
+		var threadId = req.params.id;
+		db.Thread.find({
+			where: {
+				id: threadId
+			},
+			include: [{
+				model: db.Post,
+				attributes: ['id', 'title', 'content', 'createdAt'],
+				include: [{
+					model: db.User,
+					attributes: ['id','username']
+				}] 
+			}]
+		}).then(function(thread) {
+			if (!thread) {
+				res.json({ message: 'error', detail: 'cannot find thread with id: ' + threadId });
+			} else {
+				res.json(thread);
+			}
+		}).error(function(err) {
+
+		})
+	});
 	
 router.route('/post')
 	.get(function(req,res){
