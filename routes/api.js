@@ -191,7 +191,7 @@ router.route('/developer')
     })
 	
 	.post(function(req,res) {
-		if (!(req.body.username && req.body.password && req.body.email && req.body.companyName)) {
+		if (!(req.body.username && req.body.password && req.body.email)) {
 			res.json({
 				message: 'error',
 				detail: 'please provide complete information'
