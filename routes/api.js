@@ -48,10 +48,19 @@ router.route('/user')
 	
 router.route('/item')
 	.get(function(req, res) {
-		db.Item.findAll()
-			.success(function(items) {
-				res.json(items);
-			});
+		if (req.query){
+			var tags= req.query.tags.split("-");
+			db.Item.filterByTag(tags, function(items){
+				res.json(items)
+			})
+		}
+		else{
+			db.Item.findAll()
+				.success(function(items) {
+					res.json(items);
+				});
+			
+		}
 	})
 router.route('/item/random')
 	.get(function(req,res){
@@ -217,5 +226,6 @@ router.route('/developer')
 		});
 		
 	});
+
 
 module.exports = router;
