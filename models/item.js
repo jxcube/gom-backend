@@ -14,7 +14,8 @@ var model =function(sequelize,DataTypes){
 					callback(items[Math.floor(Math.random()*items.length)]);
 				});
 			}, 
-			filterByTag: function(tags, callback){
+			filterByTag: function(tags, callback)
+			{
 				this.findAll().then(function(items){
 					var filteredItems = items.filter(function(item){
 						for(var i=0; i < item.tag.length; i++){
@@ -29,6 +30,21 @@ var model =function(sequelize,DataTypes){
 					callback(filteredItems);
 				})
 
+			},
+			filterByPrice: function(price, callback)
+			{
+				var p = parseFloat(price);
+				this.findAll().then(function(items){
+					var filterPrice = items.filter(function(item){
+						if (item.minPrice < p){
+							return true;
+						}
+					})
+				
+					callback(filterPrice);
+				})
+					
+				
 			}
 		} 
 

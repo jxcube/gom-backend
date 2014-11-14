@@ -48,13 +48,20 @@ router.route('/user')
 	
 router.route('/item')
 	.get(function(req, res) {
-		if (req.query){
+		if (req.query.tags){
 			var tags= req.query.tags.split("-");
 			db.Item.filterByTag(tags, function(items){
 				res.json(items)
 			})
 		}
-		else{
+		else if (req.query.budget){
+			var budget = req.query.budget;
+			db.Item.filterByPrice(budget, function(items){
+				res.json(items)
+			})
+		}
+		else {
+
 			db.Item.findAll()
 				.success(function(items) {
 					res.json(items);
