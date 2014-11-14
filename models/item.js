@@ -20,7 +20,7 @@ var model =function(sequelize,DataTypes){
 					var filteredItems = items.filter(function(item){
 						for(var i=0; i < item.tag.length; i++){
 							for (var j=0; j < tags.length; j++){
-								if (item.tag[i]===tags[j]){
+								if (item.tag[i].toLowerCase()===tags[j]){
 									return true;
 								}
 							}

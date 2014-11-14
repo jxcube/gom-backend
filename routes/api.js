@@ -48,8 +48,9 @@ router.route('/user')
 	
 router.route('/item')
 	.get(function(req, res) {
+
 		if (req.query.tags){
-			var tags= req.query.tags.split("-");
+			var tags= req.query.tags.toLowerCase().split("-");
 			db.Item.filterByTag(tags, function(items){
 				res.json(items)
 			})
@@ -61,7 +62,6 @@ router.route('/item')
 			})
 		}
 		else {
-
 			db.Item.findAll()
 				.success(function(items) {
 					res.json(items);
