@@ -49,8 +49,9 @@ router.route('/user')
 router.route('/item')
 	.get(function(req, res) {
 
-		if (req.query.tags){
-			var tags= req.query.tags.toLowerCase().split("-");
+		if (req.query.tags || req.query.gender){
+			var tags= req.query.tags || req.query.gender;
+			tags = tags.toLowerCase().split("-");
 			db.Item.filterByTag(tags, function(items){
 				res.json(items)
 			})
@@ -66,7 +67,6 @@ router.route('/item')
 				.success(function(items) {
 					res.json(items);
 				});
-			
 		}
 	})
 router.route('/item/random')
