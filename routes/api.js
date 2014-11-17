@@ -74,7 +74,22 @@ router.route('/item/random')
 		db.Item.getRandom(function(item) {
 			res.json(item);
 		});
-	})
+	}) 
+
+router.route('/item/:id')
+	.get(function(req, res) {
+		var itemId = req.params.id;
+		db.Item.find({
+			where: {
+				id: itemId
+			}
+		}).then(function(item) {
+			res.json(item);
+			}
+		).error(function(err) {
+
+		})
+	});
 
 
 router.route('/thread')
