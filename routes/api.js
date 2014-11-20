@@ -207,7 +207,7 @@ router.route('/post')
 					post.setThread(thread);
 					db.User.find({
 						where: {
-							id: req.body.userid
+							name: req.body.username
 						}
 					}).complete(function(err, user) {
 						if (!user) {
@@ -220,7 +220,7 @@ router.route('/post')
 				}
 			});
 		})
-	});
+	}); 
 
 router.route('/developer')
     .get(function(req, res) {
