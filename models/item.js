@@ -14,22 +14,40 @@ var model =function(sequelize,DataTypes){
 					callback(items[Math.floor(Math.random()*items.length)]);
 				});
 			}, 
-			filterByTag: function(tags, callback)
-			{
-				this.findAll().then(function(items){
-					var filteredItems = items.filter(function(item){
-						for(var i=0; i < item.tag.length; i++){
-							for (var j=0; j < tags.length; j++){
-								if (item.tag[i].toLowerCase()===tags[j]){
-									return true;
-								}
-							}
-						}
-						return false;
-					})
-					callback(filteredItems);
+			filterByTagInclusive: function(items, tags, callback) {
+				items = items.map(function(item) {
+					item.tag = item.tag.map(function(tag) {
+						return tag.toLowerCase();
+					});
+					return item;
 				})
-
+				items = items.filter(function(item) {
+					var intersection = [];
+					for (var i = 0; i < tags.length; i++) {
+						if (item.tag.indexOf(tags[i]) != -1) {
+							intersection.push(tags[i]);
+						}
+					}
+					return intersection.length === tags.length;
+				});
+				return callback(null, items);
+			},
+			filterByTagExclusive: function(items, tags, callback) {
+				items = items.map(function(item) {
+					item.tag = item.tag.map(function(tag) {
+						return tag.toLowerCase();
+					});
+					return item;
+				})
+				items = items.filter(function(item) {
+					for (var i = 0; i < tags.length; i++) {
+						if (item.tag.indexOf(tags[i]) != -1) {
+							return true;
+						}
+					}
+					return false;
+				});
+				return callback(null, items);
 			},
 			filterByPrice: function(price, callback)
 			{

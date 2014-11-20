@@ -49,25 +49,36 @@ router.route('/user')
 router.route('/item')
 	.get(function(req, res) {
 
-		if (req.query.tags || req.query.gender){
-			var tags= req.query.tags || req.query.gender;
-			tags = tags.toLowerCase().split("-");
-			db.Item.filterByTag(tags, function(items){
-				res.json(items)
-			})
-		}
-		else if (req.query.budget){
-			var budget = req.query.budget;
-			db.Item.filterByPrice(budget, function(items){
-				res.json(items)
-			})
-		}
-		else {
+		var tags = [];
+		if (req.query.tag) {
+			tags = req.query.tag.toLowerCase().split('-');
 			db.Item.findAll()
-				.success(function(items) {
+				.then(function(items) {
+					db.Item.filterByTagInclusive(items, tags, function(err, results) {
+						if (err) {
+							res.json({ message: 'error', detail: 'error filtering by tags' });
+							return;
+						}
+						if (results.length !== 0) {
+							res.json(results);
+						} else {
+							db.Item.filterByTagExclusive(items, tags, function(err, results) {
+								if (err) {
+									res.json({ message: 'error', detail: 'error filtering by tags' });
+									return;
+								}
+								res.json(results);
+							});
+						}
+				})
+			});
+		} else {
+			db.Item.findAll()
+				.then(function(items) {
 					res.json(items);
 				});
 		}
+		
 	})
 router.route('/item/random')
 	.get(function(req,res){
