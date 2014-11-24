@@ -7,15 +7,16 @@ var router = express.Router();
 var db = require('../models');
 
 router.route('/user')
-    // GET /api/user -> all user data
-    .get(function(req, res) {
-        db.User.findAll({
-            attributes: ['username', 'email','gender']
-        })
-            .success(function(users) {
-                res.json(users);
-            });
-    })
+  /*
+   * GET /user
+   */
+  .get(function(req, res) {
+      db.User.findAll({
+          attributes: ['username', 'email','gender']
+      }).then(function(users) {
+        res.json(users);
+    	});
+  })
 	
 	.post(function(req,res) {
 		if (!(req.body.username && req.body.password && req.body.email && req.body.gender)) {
@@ -23,8 +24,8 @@ router.route('/user')
 				message: 'error',
 				detail: 'please provide complete information'
 			});
-            return;
-		}
+    return;
+	}
 
 
 		// Create new user entry
@@ -119,7 +120,15 @@ router.route('/thread')
 				res.json(threads);
 			});
 	})
-	.post(function(req,res) {
+
+	/*
+	 * POST /thread
+	 * requires:
+	 *   - title
+	 *   - content
+	 *   - username
+	 */
+	.post(function(req, res) {
 		if (!(req.body.title && req.body.content && req.body.username)){
 			res.json({
 				message : 'error',
@@ -127,28 +136,47 @@ router.route('/thread')
 			});
 			return;
 		}
-		db.Thread.create({
-			title: req.body.title
-		}).complete(function(err, thread){
-			db.Post.create({
-				title: req.body.title,
-				content: req.body.content
-			}).complete(function(err, post) {
-				post.setThread(thread);
-				db.User.find({
-					where: {
-						username: req.body.username
+
+		db.sequelize.transaction(function(t) {
+			db.Thread.create({
+				title: req.body.title
+			}, { transaction: t }).complete(function(err, thread){
+				if (err) {
+					t.rollback();
+					res.json({ message: 'error', detail: 'error createing new thread' });
+					return;
+				}
+				db.Post.create({
+					title: req.body.title,
+					content: req.body.content
+				}, { transaction: t }).complete(function(err, post) {
+					if (err) {
+						t.rollback();
+						res.json({ message: 'error', detail: 'error creating new post' });
+						return;
 					}
-				}).complete(function(err, user) {
-					if (!user) {
-						res.json({ message: 'user not found' });
-					} else {
-						post.setUser(user);
-						res.json({ message: 'success' });
-					}
-				})
+					post.setThread(thread);
+					db.User.find({
+						where: {
+							username: req.body.username
+						}
+					}, { transaction: t }).complete(function(err, user) {
+						if (err) {
+							t.rollback();
+							res.json({ message: 'error', detail: 'error finding user' });
+						} else if (!user) {
+							t.rollback();
+							res.json({ message: 'error', detail: 'user not found' });
+						} else {
+							post.setUser(user);
+							t.commit();
+							res.json({ message: 'success' });
+						}
+					})
+				});
 			});
 		});
+
 	})
 
 router.route('/thread/:id')
@@ -175,52 +203,64 @@ router.route('/thread/:id')
 		}).error(function(err) {
 
 		})
-	});
-	
-router.route('/post')
-	.get(function(req,res){
-		db.Post.findAll()
-			.success(function(posts){
-				res.json(posts);
-			});
 	})
-	.post(function(req,res){
-		if (!(req.body.title && req.body.content)){
-			res.json({
-				message : 'error',
-				detail : 'please provide title and content'
-			});
+
+	/*
+	 * POST /thread/{id}
+	 * requires:
+	 *   - title
+	 *   - content
+	 *   - username
+	 */
+	.post(function(req, res) {
+		if (!(req.body.title && req.body.content && req.body.username)) {
+			res.json({ message: 'error', detail: 'please provide complete information' });
 			return;
 		}
-		db.Post.create({
-			title : req.body.title,
-			content: req.body.content
-		}).complete(function(err, post){
-			db.Thread.find({
-				where: {
-					id: req.body.threadid
-				}
-			}).complete(function(err, thread) {
-				if (!thread) {
-					res.json({ message: 'no thread found'});
-				} else {
-					post.setThread(thread);
-					db.User.find({
+		db.sequelize.transaction(function(t) {
+			var post = null;
+			var thread = null;
+			var user = null;
+			db.Post.create({
+				title: req.body.title,
+				content: req.body.content
+			}, { transaction: t })
+				.then(function(newpost) {
+					post = newpost;
+					return db.Thread.find({
 						where: {
-							name: req.body.username
+							id: req.params.id
 						}
-					}).complete(function(err, user) {
-						if (!user) {
-							res.json({ message: 'no user found'});
-						} else {
-							post.setUser(user);
-							res.json({ message: 'success'});
+					}, { transaction: t });
+				}).then(function(newthread) {
+					if (!newthread) {
+						t.rollback();
+						res.json({ message: 'error', detail: 'there is no thread with id ' + req.params.id })
+						return;
+					}
+					thread = newthread;
+					post.setThread(thread);
+					return db.User.find({
+						where: {
+							username: req.body.username
 						}
-					});
-				}
-			});
-		})
-	}); 
+					}, { transaction: t });
+				}).then(function(theuser) {
+					if (!theuser) {
+						t.rollback();
+						res.json({ message: 'error', detail: 'no user named ' + req.body.username });
+						return;
+					}
+					user = theuser;
+					post.setUser(user);
+					t.commit();
+					res.json({ message: 'success' });
+				}).error(function(err) {
+					t.rollback();
+					res.json({ message: 'error', detail: 'there is a connection problem in our database, try again later' });
+				});
+		});
+	});
 
 router.route('/developer')
     .get(function(req, res) {
