@@ -6,6 +6,7 @@ module.exports = function(sequelize, Datatypes){
             associate: function(models) {
                 Thread.hasMany(models.Post);
             }
+        
         }
     });
 

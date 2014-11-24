@@ -72,11 +72,20 @@ router.route('/item')
 						}
 				})
 			});
-		} else {
-			db.Item.findAll()
-				.then(function(items) {
-					res.json(items);
-				});
+
+		}
+		else if (req.query.budget){
+			var budget = req.query.budget;
+			db.Item.filterByPrice(budget, function(items){
+				res.json(items);
+			})
+		} 
+	
+		else {
+		db.Item.findAll()
+			.then(function(items) {
+				res.json(items);
+			});
 		}
 		
 	})
