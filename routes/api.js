@@ -1,51 +1,52 @@
-/**
-* This is where API routes are defined.
-*/
+/*
+ * This is where API routes are defined.
+ */
 
 var express = require('express');
 var router = express.Router();
 var db = require('../models');
 
 router.route('/user')
-  /*
-   * GET /user
-   */
-  .get(function(req, res) {
-      db.User.findAll({
-          attributes: ['username', 'email','gender']
-      }).then(function(users) {
-        res.json(users);
-      });
-  })
-  
-  .post(function(req,res) {
-    if (!(req.body.username && req.body.password && req.body.email && req.body.gender)) {
-      res.json({
-        message: 'error',
-        detail: 'please provide complete information'
-      });
-    return;
-  }
-
-
-    // Create new user entry
-    db.User.create({
-      username: req.body.username,
-      password: req.body.password,
-      email: req.body.email,
-      gender: req.body.gender
-    }).complete(function(err) {
-      if (err) {
-        res.json({
-          message: 'error',
-          detail : 'username / email already exist'
+    /*
+     * GET /user -> returns all users
+     */
+    .get(function(req, res) {
+        db.User.findAll({
+            attributes: ['username', 'email','gender']
+        }).then(function(users) {
+            res.json(users);
+        }).error(function(e) {
+            res.json({ message: 'error', detail: e.message });
         });
-      } else {
-        res.json({ message: 'success'}); 
-      }
+    })
+
+    /*
+     * POST /user -> creates new user
+     * requires:
+     *   - username
+     *   - password
+     *   - email
+     *   - gender
+     */
+    .post(function(req,res) {
+        db.User.findOrCreate({
+            where: { username: req.body.username },
+            defaults: {
+                password: req.body.password,
+                email: req.body.email,
+                gender: req.body.gender
+            }
+        }).then(function(user, created) {
+            if (!created) {
+                res.json({ message: 'error', detail: 'username ' + req.body.username + ' already exists' });
+                return;
+            }
+            res.json({ message: 'success' });
+        }).error(function(e) {
+            console.log(e);
+            res.json({ message: 'error', detail: e.errors[0].message });
+        })
     });
-    
-  });
   
 router.route('/item')
   .get(function(req, res) {
@@ -283,10 +284,10 @@ router.route('/developer')
 
     // Create new developer entry
     db.Developer.create({
-      username: req.body.username,
-      password: req.body.password,
-      email: req.body.email,
-      companyName: req.body.companyName
+        username: req.body.username,
+        password: req.body.password,
+        email: req.body.email,
+        companyName: req.body.companyName
     }).complete(function(err) {
       if (err) {
         res.json({

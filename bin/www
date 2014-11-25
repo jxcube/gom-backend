@@ -20,7 +20,7 @@ db
         } else {
             // FOR TESTING ONLY
             db.User.create({
-                username: 'Joko Doe',
+                username: 'JokoDoe',
                 password: 'secret',
 				email: 'john-doe@example.org',
                 gender: 'male'

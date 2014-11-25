@@ -1,35 +1,38 @@
-/**
-* This is the definition of User model.
-* 
-* Commented by: Raibima Imam Putra
-* Coded by: Yonas Reynald D. N.
-*/
 module.exports = function(sequelize, DataTypes) {
     var User = sequelize.define('User', {
-        username: {type : DataTypes.STRING, unique : true},
-        password: DataTypes.STRING,
-		email: {type : DataTypes.STRING, unique : true},
-		gender: DataTypes.STRING
+        username: {
+            type: DataTypes.STRING,
+            unique: true,
+            allowNull: false,
+            validate: {
+                isAlphanumeric: {
+                    msg: 'username should only contain alphabets and numerics'
+                },
+                len: [6, 15]
+            }
+        },
+        password: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        email: {
+            type: DataTypes.STRING,
+            unique: true,
+            allowNull: false,
+            validate: {
+                isEmail: {
+                    msg: 'your email address is not formatted properly'
+                }
+            }
+        },
+        gender: {
+            type: DataTypes.ENUM('male', 'female'),
+            allowNull: false
+        }
     }, {
         classMethods: {
             associate: function(models) {
                 User.hasMany(models.Post);
-            },
-            getByEmail: function(email) {
-                return this.find({
-                    where: {
-                        email: email
-                    },
-                    attributes: ['username', 'email', 'password']
-                });
-            },
-            getByUsername: function(username){
-                return this.find({
-                    where: {
-                        username: username
-                    },
-                    attributes: ['username', 'email', 'password']
-                });
             }
         }
     });
