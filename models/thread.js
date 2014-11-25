@@ -1,5 +1,5 @@
 module.exports = function(sequelize, Datatypes){
-    var Thread = sequelize.define('Thread',{
+    var Thread = sequelize.define('Thread', {
         title: Datatypes.STRING
     }, {
         classMethods: {

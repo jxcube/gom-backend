@@ -13,20 +13,7 @@ module.exports = {
 
 			items = JSON.parse(items);
 
-			items.forEach(function(item) {
-				console.log("Inserting %s into the database...", item.name);
-
-				// TODO: Create item
-				db.Item.create ({
-					name: item.name,
-					minPrice: item.minPrice,
-					maxPrice: item.maxPrice,
-					description: item.description,
-	                imgUrl: item.imgUrl,
-	                tag : item.tag
-				});
-
-			});
+			db.Item.bulkCreate(items);
 		});
 	}
 }

@@ -8,11 +8,13 @@ var model =function(sequelize,DataTypes){
 		tag : DataTypes.ARRAY(DataTypes.STRING)
 	}, {
 		classMethods: {
-			getRandom : function(callback)
-			{
-				this.findAll().success(function(items){
-					callback(items[Math.floor(Math.random()*items.length)]);
-				});
+			getRandom : function(callback) {
+				this.findAll()
+                    .then(function(items){
+					    callback(null, items[Math.floor(Math.random()*items.length)]);
+				    }).error(function(e) {
+                        callback(e);
+                    });
 			}, 
 			filterByTagInclusive: function(items, tags, callback) {
 				items = items.map(function(item) {
@@ -52,23 +54,20 @@ var model =function(sequelize,DataTypes){
 			filterByPrice: function(price, callback)
 			{
 				var p = parseFloat(price);
-				this.findAll().then(function(items){
+				this.findAll().then(function(items) {
 					var filterPrice = items.filter(function(item){
 						if (item.minPrice < p){
 							return true;
 						}
-					})
-				
+					});
 					callback(filterPrice);
-				})
-					
-				
+				});
 			}
 		} 
 
 	});
 
-	return Item;
+return Item;
 
 }
 module.exports = model;
