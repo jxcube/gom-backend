@@ -1,7 +1,16 @@
-module.exports = function(sequelize, Datatypes){
+module.exports = function(sequelize, DataTypes){
     var Post = sequelize.define('Post',{
-        title : Datatypes.STRING,
-        content: Datatypes.TEXT
+        title: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [6, 64]
+            }
+        },
+        content: {
+            type: DataTypes.TEXT,
+            allowNull: false
+        }
     }, {
         classMethods: {
             associate: function(models) {

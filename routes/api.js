@@ -42,18 +42,17 @@ router.route('/user')
             }
         }).then(function(user, created) {
             if (!created) {
-                res.json({ message: 'error', detail: 'username ' + req.body.username + ' already exists' });
-                return;
+                throw new Error('username ' + req.body.username + ' already exists');
             }
             res.json({ message: 'success' });
         }).error(function(e) {
-            res.json({ message: 'error', detail: e.errors[0].message });
+            res.json({ message: 'error', detail: e.message });
         })
     });
 
 router.route('/user/:id')
     /*
-     * GET /user/:id -> get a single user by id
+     * GET /user/{id} -> get a single user by id
      */
     .get(function(req, res) {
         if (!parseInt(req.params.id)) {
@@ -131,7 +130,7 @@ router.route('/item/random')
 
 router.route('/item/:id')
     /*
-     * GET /item/:id -> returns one single item with given id
+     * GET /item/{id} -> returns one single item with given id
      */
     .get(function(req, res) {
         if (!parseInt(req.params.id)) {
@@ -155,163 +154,160 @@ router.route('/item/:id')
 // END ITEM
 //
 
+//
+// THREAD
+//
+
 router.route('/thread')
-.get(function(req,res) {
-    db.Thread.findAll({
-      include: [{
-        model: db.Post,
-        attributes: ['id', 'title', 'content', 'createdAt'],
-        include: [{
-          model: db.User,
-          attributes: ['id','username']
-      }]
-  }]
-})
-    .success(function(threads){
-        res.json(threads);
+    /*
+     * GET /thread -> returns all threads
+     */
+    .get(function(req,res) {
+        db.Thread.findAll({
+            include: [{
+                model: db.Post,
+                attributes: ['id', 'title', 'content', 'createdAt'],
+                include: [{
+                    model: db.User,
+                    attributes: ['id','username']
+                }]
+            }]
+        }).then(function(threads){
+            res.json(threads);
+        }).error(function(e) {
+            res.json({ message: 'error', detail: e.message });
+        });
+    })
+
+    /*
+     * POST /thread
+     * requires:
+     *   - title
+     *   - content
+     *   - username
+     */
+    .post(function(req, res) {
+        db.sequelize.transaction(function(t) {
+            var user, thread, post;
+            db.User.findOne({
+                where: { username: req.body.username }
+            }, { transaction: t })
+            .then(function(theuser) {
+                if (!theuser) {
+                    throw new Error('no user found with username ' + req.body.username);
+                }
+                user = theuser;
+                return db.Thread.create({
+                    title: req.body.title
+                }, { transaction: t });
+            }).then(function(newthread) {
+                thread = newthread;
+                return db.Post.create({
+                    title: req.body.title,
+                    content: req.body.content
+                });
+            }).then(function(newpost) {
+                post = newpost;
+                post.setUser(user);
+                post.setThread(thread);
+                return t.commit();
+            }).then(function() {
+                res.json({ message: 'success' });
+            }).error(function(e) {
+                t.rollback().then(function() {
+                    res.json({ message: 'error', detail: e.message });
+                });
+            })
+        });
     });
-})
-
-  /*
-   * POST /thread
-   * requires:
-   *   - title
-   *   - content
-   *   - username
-   */
-   .post(function(req, res) {
-    if (!(req.body.title && req.body.content && req.body.username)){
-      res.json({
-        message : 'error',
-        detail : 'please provide title and content'
-    });
-      return;
-  }
-
-  db.sequelize.transaction(function(t) {
-      db.Thread.create({
-        title: req.body.title
-    }, { transaction: t }).complete(function(err, thread){
-        if (err) {
-          t.rollback();
-          res.json({ message: 'error', detail: 'error createing new thread' });
-          return;
-      }
-      db.Post.create({
-          title: req.body.title,
-          content: req.body.content
-      }, { transaction: t }).complete(function(err, post) {
-          if (err) {
-            t.rollback();
-            res.json({ message: 'error', detail: 'error creating new post' });
-            return;
-        }
-        post.setThread(thread);
-        db.User.find({
-            where: {
-              username: req.body.username
-          }
-      }, { transaction: t }).complete(function(err, user) {
-        if (err) {
-          t.rollback();
-          res.json({ message: 'error', detail: 'error finding user' });
-      } else if (!user) {
-          t.rollback();
-          res.json({ message: 'error', detail: 'user not found' });
-      } else {
-          post.setUser(user);
-          t.commit();
-          res.json({ message: 'success' });
-      }
-  })
-  });
-  });
-});
-
-})
 
 router.route('/thread/:id')
-.get(function(req, res) {
-    var threadId = req.params.id;
-    db.Thread.find({
-      where: {
-        id: threadId
-    },
-    include: [{
-        model: db.Post,
-        attributes: ['id', 'title', 'content', 'createdAt'],
-        include: [{
-          model: db.User,
-          attributes: ['id','username']
-      }] 
-  }]
-}).then(function(thread) {
-  if (!thread) {
-    res.json({ message: 'error', detail: 'cannot find thread with id: ' + threadId });
-} else {
-    res.json(thread);
-}
-}).error(function(err) {
-
-})
-})
-
-  /*
-   * POST /thread/{id}
-   * requires:
-   *   - title
-   *   - content
-   *   - username
-   */
-   .post(function(req, res) {
-    if (!(req.body.title && req.body.content && req.body.username)) {
-      res.json({ message: 'error', detail: 'please provide complete information' });
-      return;
-  }
-  db.sequelize.transaction(function(t) {
-      var post = null;
-      var thread = null;
-      var user = null;
-      db.Post.create({
-        title: req.body.title,
-        content: req.body.content
-    }, { transaction: t })
-      .then(function(newpost) {
-          post = newpost;
-          return db.Thread.find({
-            where: {
-              id: req.params.id
-          }
-      }, { transaction: t });
-      }).then(function(newthread) {
-          if (!newthread) {
-            t.rollback();
-            res.json({ message: 'error', detail: 'there is no thread with id ' + req.params.id })
+    /*
+     * GET /thread/{id} -> returns one single thread
+     */
+    .get(function(req, res) {
+        if (!parseInt(req.params.id)) {
+            res.json({ message: 'error', detail: 'id of /thread/:id should be integer' })
             return;
         }
-        thread = newthread;
-        post.setThread(thread);
-        return db.User.find({
+        db.Thread.findOne({
             where: {
-              username: req.body.username
-          }
-      }, { transaction: t });
-    }).then(function(theuser) {
-      if (!theuser) {
-        t.rollback();
-        res.json({ message: 'error', detail: 'no user named ' + req.body.username });
-        return;
-    }
-    user = theuser;
-    post.setUser(user);
-    t.commit();
-    res.json({ message: 'success' });
-}).error(function(err) {
-  t.rollback();
-  res.json({ message: 'error', detail: 'there is a connection problem in our database, try again later' });
-});
-});
-});
+                id: req.params.id
+            },
+            include: [{
+                model: db.Post,
+                attributes: ['id', 'title', 'content', 'createdAt'],
+                include: [{
+                    model: db.User,
+                    attributes: ['id','username']
+                }] 
+            }]
+        }).then(function(thread) {
+            if (!thread) {
+                throw new Error('cannot find thread with id: ' + req.params.id);
+            }
+            res.json(thread);
+        }).error(function(e) {
+            res.json({ message: 'error', detail: e.message });
+        })
+    })
+
+    /*
+     * POST /thread/{id}
+     * requires:
+     *   - title
+     *   - content
+     *   - username
+     */
+    .post(function(req, res) {
+        if (!(req.body.title && req.body.content && req.body.username)) {
+            res.json({ message: 'error', detail: 'please provide complete information' });
+            return;
+        }
+        db.sequelize.transaction(function(t) {
+            var post, thread, user;
+            db.Post.create({
+                title: req.body.title,
+                content: req.body.content
+            }, { transaction: t })
+            .then(function(newpost) {
+                post = newpost;
+                return db.Thread.find({
+                    where: {
+                        id: req.params.id
+                    }
+                }, { transaction: t });
+            }).then(function(thethread) {
+                if (!thethread) {
+                    throw new Error('there is no thread with id ' + req.params.id);
+                }
+                thread = thethread;
+                post.setThread(thread);
+                return db.User.findOne({
+                    where: {
+                        username: req.body.username
+                    }
+                }, { transaction: t });
+            }).then(function(theuser) {
+                if (!theuser) {
+                    throw new Error('no user found with username' + req.body.username);
+                }
+                user = theuser;
+                post.setUser(user);
+                return t.commit();
+            }).then(function() {
+                res.json({ message: 'success' });
+            }).error(function(e) {
+                t.rollback().then(function() {
+                    res.json({ message: 'error', detail: e.message });
+                });
+            });
+        });
+    });
+
+//
+// END THREAD
+//
 
 router.route('/developer')
 .get(function(req, res) {

@@ -12,33 +12,24 @@ router.route('/login')
             return;
         }
 
-        db.User.getByEmail(req.body.email)
-            .success(function(user) {
-                if (!user) {
-                    res.json({
-                        message: 'error',
-                        detail: 'User not found!'
-                    });
-                } else {
-                    if (req.body.password !== user.password) {
-                        res.json({
-                            message: 'error',
-                            detail: 'invalid password'
-                        });
-                    } else {
-                        res.json({
-                            message: 'success',
-                            username: user.username,
-                            email: user.email
-                        });
-                    }
+        db.User.findOne({
+            where: { email: req.body.email }
+        }).then(function(user) {
+            if (!user) {
+                throw new Error('no user found with email ' + req.body.email);
+            } else {
+                if (req.body.password !== user.password) {
+                    throw new Error('invalid password');
                 }
-            }).error(function(err) {
                 res.json({
-                    message: 'error',
-                    detail: 'Error in database connectivity'
+                    message: 'success',
+                    username: user.username,
+                    email: user.email
                 });
-            })
+            }
+        }).error(function(e) {
+            res.json({ message: 'error', detail: e.message })
+        })
     });
 
 module.exports = router;
