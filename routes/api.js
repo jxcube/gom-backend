@@ -41,8 +41,8 @@ router.route('/user')
                 gender: req.body.gender
             }
         }).then(function(user) {
-            if (!user[0].options.isNewRecord) {
-                throw new Error('username ' + req.body.username + ' already exists');
+            if (user) {
+                throw new Error('user ' + req.body.username + ' already exists');
             }
             res.json({ message: 'success' });
         }).error(function(e) {
