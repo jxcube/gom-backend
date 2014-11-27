@@ -40,8 +40,8 @@ router.route('/user')
                 email: req.body.email,
                 gender: req.body.gender
             }
-        }).then(function(user, created) {
-            if (!created) {
+        }).then(function(user) {
+            if (!user[0].options.isNewRecord) {
                 throw new Error('username ' + req.body.username + ' already exists');
             }
             res.json({ message: 'success' });
