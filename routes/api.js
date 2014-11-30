@@ -5,6 +5,7 @@
 var express = require('express');
 var router = express.Router();
 var db = require('../models');
+var _ = require('lodash');
 
 //
 // USER
@@ -309,6 +310,28 @@ router.route('/thread/:id')
 //
 // END THREAD
 //
+
+//
+// TAGS
+//
+
+router.route('/tags')
+    .get(function(req, res) {
+        db.Item.findAll({
+            attributes: ['tag']
+        }).then(function(items) {
+            var tags = [];
+            items.forEach(function(item) {
+                item.tag.forEach(function(t) {
+                    tags.push(t);
+                });
+            });
+            tags = _.uniq(tags);
+            res.json(tags);
+        }).error(function(e) {
+            res.json({ message: 'error', detail: e });
+        })
+    })
 
 router.route('/developer')
 .get(function(req, res) {
