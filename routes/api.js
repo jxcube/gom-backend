@@ -33,21 +33,22 @@ router.route('/user')
      *   - gender
      */
     .post(function(req, res) {
-        db.User.findOrCreate({
-            where: { username: req.body.username },
-            defaults: {
-                password: req.body.password,
-                email: req.body.email,
-                gender: req.body.gender
-            }
+        db.User.create({
+            username: req.body.username,
+            password: req.body.password,
+            email: req.body.email,
+            gender: req.body.gender
         }).then(function(user) {
-            if (user) {
-                throw new Error('user ' + req.body.username + ' already exists');
-            }
             res.json({ message: 'success' });
         }).error(function(e) {
-            res.json({ message: 'error', detail: e.message });
-        })
+            var detail = '';
+            if (e.name === 'SequelizeUniqueConstraintError') {
+                detail = e.parent.detail;
+            } else {
+                detail = e.errors[0].message;
+            }
+            res.json({ message: 'error', detail: detail });
+        });
     });
 
 router.route('/user/:id')
