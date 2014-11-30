@@ -191,7 +191,7 @@ router.route('/thread')
     .post(function(req, res) {
         db.sequelize.transaction(function(t) {
             var user, thread, post;
-            db.User.findOne({
+            return db.User.findOne({
                 where: { username: req.body.username }
             }, { transaction: t })
             .then(function(theuser) {
@@ -217,7 +217,11 @@ router.route('/thread')
                 res.json({ message: 'success' });
             }).error(function(e) {
                 t.rollback().then(function() {
-                    res.json({ message: 'error', detail: e.message });
+                    var detail = e.message;
+                    if (e.name === 'SequelizeValidationError') {
+                        detail = e.errors[0].message;
+                    }
+                    res.json({ message: 'error', detail: detail });
                 });
             })
         });

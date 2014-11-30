@@ -4,7 +4,10 @@ module.exports = function(sequelize, DataTypes){
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                len: [6, 64]
+                len: {
+                    args: [6, 64],
+                    msg: 'your title is too short (should be at least 6 character long)'   
+                }
             }
         },
         content: {
