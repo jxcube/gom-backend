@@ -32,6 +32,7 @@ var model =function(sequelize,DataTypes){
 				});
 				return callback(null, items);
 			},
+
 			filterByTagExclusive: function(items, tags, callback) {
 				items = items.map(function(item) {
 					item.tag = item.tag.map(function(tag) {

@@ -51,7 +51,7 @@ router.route('/item')
 
 		var tags = [];
 		if (req.query.tag) {
-			tags = req.query.tag.toLowerCase().split('-');
+			tags = req.query.tag.toUpperCase().split('-');
 			db.Item.findAll()
 				.then(function(items) {
 					db.Item.filterByTagInclusive(items, tags, function(err, results) {
@@ -62,7 +62,7 @@ router.route('/item')
 						if (results.length !== 0) {
 							res.json(results);
 						} else {
-							db.Item.filterByTagExclusive(items, tags, function(err, results) {
+							db.Item.filterFilterByTagExclusive(items, tags, function(err, results) {
 								if (err) {
 									res.json({ message: 'error', detail: 'error filtering by tags' });
 									return;
