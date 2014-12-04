@@ -86,7 +86,7 @@ router.route('/user/:id')
 router.route('/item')
     .get(function(req, res) {
         var tags = [];
-        if (req.query.tag) {
+        if (req.query.tag && !req.query.budget) {
             tags = req.query.tag.toLowerCase().split('-');
             db.Item.findAll()
             .then(function(items) {
@@ -108,6 +108,13 @@ router.route('/item')
                     }
                 })
             });
+
+        } else if(req.query.budget && !req.query.tag) {
+            var budget = req.query.budget;
+            db.Item.filterByPrice(budget,function(items){
+                    res.json(items)
+                })
+            
         } else {
             db.Item.findAll()
             .then(function(items) {
