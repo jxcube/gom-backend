@@ -106,15 +106,43 @@ router.route('/item')
                             res.json(results);
                         });
                     }
-                })
+                });
             });
 
-        } else if(req.query.budget && !req.query.tag) {
-            var budget = req.query.budget;
-            db.Item.filterByPrice(budget,function(items){
-                    res.json(items)
-                })
-            
+        } else if (req.query.budget && !req.query.tag) {
+            var budget = parseInt(req.query.budget);
+            if (!budget) {
+                res.json({ messsage: 'error', detail: 'budget should be integer' });
+            } else {
+                db.Item.filterByPrice(budget, function(items) {
+                    res.json(items);
+                });
+            }
+        } else if (req.query.budget && req.query.tag) {
+            var budget = parseInt(req.query.budget);
+            if (!budget) {
+                res.json({ messsage: 'error', detail: 'budget should be integer' });
+            } else {
+                db.Item.filterByPrice(budget, function(items) {
+                    db.Item.filterByTagInclusive(items, tags, function(err, results) {
+                        if (err) {
+                            res.json({ message: 'error', detail: 'error filtering by tags' });
+                            return;
+                        }
+                        if (results.length !== 0) {
+                            res.json(results);
+                        } else {
+                            db.Item.filterByTagExclusive(items, tags, function(err, results) {
+                                if (err) {
+                                    res.json({ message: 'error', detail: 'error filtering by tags' });
+                                    return;
+                                }
+                                res.json(results);
+                            });
+                        }
+                    })
+                });
+            }
         } else {
             db.Item.findAll()
             .then(function(items) {
