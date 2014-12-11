@@ -5,10 +5,7 @@ module.exports = function(sequelize, DataTypes) {
             unique: true,
             allowNull: false,
             validate: {
-                isAlphanumeric: {
-                    msg: 'username should only contain alphabets and numerics'
-                },
-                len: [6, 15]
+                len: [6, 64]
             }
         },
         password: {
