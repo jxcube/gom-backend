@@ -13,7 +13,7 @@ app.set('port', process.env.PORT || 3000);
 // open the connection between the ORM and the database
 db
     .sequelize
-    .sync({ force: true })
+    .sync()
     .complete(function(err) {
         if (err) {
             throw err;
