@@ -10,7 +10,11 @@ module.exports = function(sequelize, DataTypes) {
         },
         password: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            validate: {
+                is: ['^(?=.*[a-zA-Z])(?=.*[0-9])', 'i'],
+                len: [8, 64]
+            }
         },
         email: {
             type: DataTypes.STRING,

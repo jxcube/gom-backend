@@ -43,10 +43,14 @@ router.route('/user')
             res.json({ message: 'success' });
         }).error(function(e) {
             var detail = '';
+            console.log(e);
             if (e.name === 'SequelizeUniqueConstraintError') {
                 detail = e.parent.detail;
             } else {
                 detail = e.errors[0].message;
+                if (e.errors[0].path === 'password') {
+                    detail = 'Your password should be a combination between numbers and letters';
+                }
             }
             res.json({ message: 'error', detail: detail });
         });
